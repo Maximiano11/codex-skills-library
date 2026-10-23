@@ -244,12 +244,12 @@ perfil. Não é necessário `sudo`.
 
 ### Preservação e conflitos
 
-- Copia a pasta inteira de cada skill, preservando recursos, licença e bits executáveis.
+- Copia a pasta inteira de cada skill, preservando recursos, licença e permissões.
 - Verifica os hashes das fontes selecionadas contra `manifest.json` antes da cópia.
   Essa conferência detecta divergências no snapshot, sem autenticar a origem do clone.
-- Skills com conteúdo, estrutura e bits executáveis idênticos são mantidas sem escrita.
+- Skills com conteúdo, estrutura e permissões idênticos são mantidas sem escrita.
 - Um conflito de conteúdo ou uma entrada inválida bloqueia o lote durante a prévia
-  interna, antes de criar arquivos. Não existe `--force`, atualização ou exclusão automática.
+  interna, antes de criar arquivos. Não existe `--force`; atualização e remoção exigem os comandos explícitos abaixo.
 - Recusa links simbólicos nas fontes e destinos das skills. O caminho ancestral do
   perfil é canonicalizado para acomodar caminhos do sistema; isso não fornece isolamento.
 - Não duplica uma skill já presente em `skills/.system/`. Confira também instalações
@@ -260,8 +260,8 @@ perfil. Não é necessário `sudo`.
 Se houver conflito, compare as pastas e preserve suas adaptações; selecione apenas as
 skills novas que deseja copiar. Se houver falha de disco/permissão ou interrupção durante
 a cópia, skills novas podem ficar parciais e as já copiadas permanecem; revise o diagnóstico.
-A instalação não é uma transação nem protege contra outro processo alterando os mesmos
-arquivos simultaneamente. Não execute instaladores concorrentes no mesmo perfil.
+Um lock bloqueia outras operações deste instalador no mesmo perfil. Ele não isola
+alterações feitas por editores ou outros programas, nem torna o lote uma transação.
 
 **Para o Engineering OS completo, prefira o instalador do framework descrito acima, antes
 de copiar suas skills individualmente.** Copiar `engineering-os` com o instalador da
@@ -278,6 +278,94 @@ Testes do instalador, isolados do perfil global real:
 ```sh
 python3 -B -m unittest discover -s tests -v
 ```
+
+### Atualizar e desinstalar skills gerenciadas
+
+Novas instalações registram o conteúdo, a estrutura e as permissões da pasta em
+`${CODEX_HOME:-$HOME/.codex}/skills-library/state.json`. Esse registro delimita o que o
+instalador gerencia; ele não assume propriedade de outras skills só por terem o mesmo nome.
+
+Após obter e revisar a versão nova do clone, use:
+
+```sh
+git pull --ff-only
+python3 -B scripts/install_skills.py update --skills brandkit --dry-run
+python3 -B scripts/install_skills.py update --skills brandkit
+
+python3 -B scripts/install_skills.py uninstall --skills brandkit --dry-run
+python3 -B scripts/install_skills.py uninstall --skills brandkit
+```
+
+`update` copia a versão presente no clone, depois de conferir sua integridade. Não há
+consulta de versões na rede nem mesclagem automática. Skills já idênticas são mantidas.
+`uninstall` retira a pasta ativa, preservando os originais no backup. Ambos aceitam
+`--codex-home`, seleção interativa e `--all`; nesses dois comandos, **`--all` seleciona
+somente as skills gerenciadas neste perfil**, não as 36 entradas do catálogo.
+
+Antes de atualizar ou remover, o instalador compara o conteúdo atual com o registro.
+Arquivos editados, adicionados ou removidos, diretórios extras, permissões alteradas,
+links e pastas ausentes bloqueiam o lote antes de alterar skills. As adaptações ficam
+intactas; não existe opção para descartá-las. Compare sua cópia com a nova versão e
+reconcilie as mudanças manualmente, mantendo backup. Não edite o estado para mascarar
+uma divergência nem apague arquivos locais para forçar uma atualização.
+
+### Instalações antigas e adoção explícita
+
+Cópias feitas pela versão anterior do instalador, ou manualmente, não possuem registro
+de propriedade. Mesmo uma cópia idêntica permanece não gerenciada por padrão.
+Se a pasta for sua, não pertencer a outro instalador e estiver idêntica ao catálogo atual,
+você pode autorizar a adoção:
+
+```sh
+python3 -B scripts/install_skills.py install --skills brandkit --adopt-existing --dry-run
+python3 -B scripts/install_skills.py install --skills brandkit --adopt-existing
+```
+
+A adoção faz backup da cópia existente e registra sua propriedade sem reescrever a pasta.
+Conteúdo diferente continua bloqueado. Se a versão do catálogo já avançou, use primeiro
+um snapshot correspondente para comparar/adotar; uma cópia modificada não é adotada.
+Não adote skills administradas pelo instalador do Engineering OS ou fornecidas pelo cliente.
+Continue usando o gerenciador responsável por elas.
+
+### Backups, falhas e recuperação
+
+Cada operação que altera o estado cria uma pasta exclusiva em
+`${CODEX_HOME:-$HOME/.codex}/skills-library/backups/<data-UTC>-<id>/`, com acesso restrito
+no sistema testado. O caminho é exibido no terminal.
+
+| Arquivo/pasta | Conteúdo |
+| --- | --- |
+| `operation.json` | Ações planejadas, estado anterior (`before`), snapshots novos e status |
+| `skills/<nome>/` | Originais de skills atualizadas/desinstaladas ou cópias adotadas |
+| `staged/<nome>/` | Nova versão preparada durante uma atualização |
+
+O original é movido inteiro para o backup antes da substituição/remoção e sua integridade
+é conferida. Backups concluídos são mantidos; não há limpeza automática. A criação de
+uma skill nova registra a operação, mas não possui versão anterior para copiar.
+Configurações e skills fora da seleção não são incluídas nem alteradas.
+
+Uma interrupção pode deixar o lote parcialmente aplicado. O status `pending` impede
+novas operações até revisão; um encerramento abrupto também pode deixar `skills-library/lock`.
+Não existe restauração automática que possa sobrescrever trabalho posterior.
+
+Para recuperar manualmente:
+
+1. Confirme que nenhum instalador está em execução e preserve uma cópia de todo o
+   diretório de controle, das pastas ativas afetadas e dos backups.
+2. Consulte `operation.json`, compare os hashes/permissões registrados em `before` com
+   `skills/<nome>/` no backup e identifique quais ações chegaram a ser aplicadas.
+3. Para voltar ao estado anterior, preserve separadamente qualquer pasta ativa nova ou
+   parcial antes de restaurar os originais do backup. Não sobreponha alterações posteriores.
+   Em uma instalação nova, pode não existir original; examine a cópia parcial separadamente.
+4. Somente após reconciliar **todas** as skills do lote, restaure o registro `state.json`
+   a partir do objeto `before`, preservando os registros alheios. Guarde o journal original
+   fora da área ativa de backups para não perder o diagnóstico e liberar a checagem de pendência.
+   Se concluir a operação em vez de revertê-la, revise também os registros finais de cada skill.
+5. Remova um lock apenas após confirmar que está obsoleto e execute uma prévia para
+   verificar o estado recuperado. Mantenha o backup de segurança e os journals arquivados.
+
+O instalador valida bytes, estrutura e permissões, sem prometer preservação de ACLs,
+atributos estendidos ou garantias contra falha de energia. Não foi validado em Windows/Linux.
 
 ## Skills incluídas (36)
 
