@@ -216,34 +216,68 @@ não validam automaticamente seu projeto, o comportamento de modelos ou integra�
 
 ## Instalar skills individuais
 
-Para skills fora das 13 do Engineering OS, escolha uma entrada na tabela abaixo e
-copie **a pasta inteira**, incluindo scripts, referências, assets e licença, para o
-diretório de skills descoberto pelo seu Codex. Não copie todas indiscriminadamente.
-
-Exemplo opcional para `brandkit`, no perfil usado por este instalador, a partir da raiz
-do clone; interrompe se o destino já existir:
+O instalador da biblioteca permite escolher entre as **36 skills incluídas**, sem
+instalar referências externas, baixar dependências ou executar scripts das skills.
+Requer Python 3.10+ e usa somente a biblioteca padrão. Execute da raiz do clone:
 
 ```sh
-python3 - <<'PYTHON'
-import os
-import shutil
-from pathlib import Path
+# Listar nomes, licenças e origem
+python3 -B scripts/install_skills.py list
 
-source = Path('skills/local/brandkit')
-profile = Path(os.environ.get('CODEX_HOME') or Path.home() / '.codex').expanduser()
-target = profile / 'skills' / source.name
-if target.exists() or target.is_symlink():
-    raise SystemExit(f'Destino existente; revise antes de atualizar: {target}')
-shutil.copytree(source, target)
-print(f'Skill copiada para {target}')
-PYTHON
+# Seleção interativa por números ou nomes; Enter cancela
+python3 -B scripts/install_skills.py install --dry-run
+python3 -B scripts/install_skills.py install
+
+# Seleção explícita, adequada também para automação
+python3 -B scripts/install_skills.py install --skills brandkit minimalist-ui --dry-run
+python3 -B scripts/install_skills.py install --skills brandkit minimalist-ui
+
+# Todas as 36 skills: escolha opcional, sujeita aos mesmos conflitos
+python3 -B scripts/install_skills.py install --all --dry-run
+python3 -B scripts/install_skills.py install --all
 ```
 
-Confirme a descoberta em uma nova sessão. Clientes que utilizem outro diretório pessoal
-precisam de adaptação explícita; evite duplicar a mesma skill em múltiplos locais.
-Instalação manual não acrescenta regras globais ao `AGENTS.md` nem fica sob gerenciamento
-do instalador Engineering OS. Scripts de imagens, integrações e outras skills podem exigir
-dependências próprias: leia seu `SKILL.md`. Evite copiar skills `system` já fornecidas pelo cliente.
+Sem terminal interativo, informe `--skills` ou `--all`. A prévia não grava arquivos e
+não memoriza escolhas: repita os mesmos nomes no comando efetivo. O destino padrão é
+`${CODEX_HOME:-$HOME/.codex}/skills/`; use `--codex-home /caminho/do/perfil` para outro
+perfil. Não é necessário `sudo`.
+
+### Preservação e conflitos
+
+- Copia a pasta inteira de cada skill, preservando recursos, licença e bits executáveis.
+- Verifica os hashes das fontes selecionadas contra `manifest.json` antes da cópia.
+  Essa conferência detecta divergências no snapshot, sem autenticar a origem do clone.
+- Skills com conteúdo, estrutura e bits executáveis idênticos são mantidas sem escrita.
+- Um conflito de conteúdo ou uma entrada inválida bloqueia o lote durante a prévia
+  interna, antes de criar arquivos. Não existe `--force`, atualização ou exclusão automática.
+- Recusa links simbólicos nas fontes e destinos das skills. O caminho ancestral do
+  perfil é canonicalizado para acomodar caminhos do sistema; isso não fornece isolamento.
+- Não duplica uma skill já presente em `skills/.system/`. Confira também instalações
+  em outros diretórios descobertos pelo seu cliente para evitar duplicações.
+- Não modifica `AGENTS.md`, `AGENTS.override.md`, `config.toml`, outras skills ou runtime
+  do Engineering OS. Não acrescenta ativação automática global.
+
+Se houver conflito, compare as pastas e preserve suas adaptações; selecione apenas as
+skills novas que deseja copiar. Se houver falha de disco/permissão ou interrupção durante
+a cópia, skills novas podem ficar parciais e as já copiadas permanecem; revise o diagnóstico.
+A instalação não é uma transação nem protege contra outro processo alterando os mesmos
+arquivos simultaneamente. Não execute instaladores concorrentes no mesmo perfil.
+
+**Para o Engineering OS completo, prefira o instalador do framework descrito acima, antes
+de copiar suas skills individualmente.** Copiar `engineering-os` com o instalador da
+biblioteca instala somente suas instruções, sem runtime, gates ou bloco global de orientação.
+Instalações manuais não são adotadas automaticamente pelo gerenciamento do framework.
+
+Confirme a descoberta em uma nova sessão do Codex. Scripts de imagens, integrações e
+outras skills podem exigir dependências próprias: leia seu `SKILL.md`. Evite copiar
+skills de sistema já fornecidas pelo cliente. O comportamento foi testado em macOS;
+outros sistemas não foram verificados nesta entrega.
+
+Testes do instalador, isolados do perfil global real:
+
+```sh
+python3 -B -m unittest discover -s tests -v
+```
 
 ## Skills incluídas (36)
 
@@ -352,6 +386,8 @@ instalação interrompida ou resolver conflitos.
 frameworks/engineering-os/  Framework completo: runtime, 13 skills, 9 workflows e testes
 skills/local/              Skills abertas locais e de terceiros
 skills/system/             Skills abertas de sistema incluídas no snapshot
+scripts/install_skills.py  Instalador seletivo da biblioteca
+tests/                     Testes isolados do instalador
 CATALOG.md                 Inventário das 79 entradas
 manifest.json              Origens, distribuição, licenças e hashes do snapshot
 THIRD_PARTY_NOTICES.md      Atribuições e escopo de licenciamento
