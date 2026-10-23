@@ -1,0 +1,15 @@
+{
+  "procedure": "Fornecer somente request, SKILL.md e fixture pertinente ao avaliador; manter rubric fora do prompt. Usar cópia isolada e registrar resposta/diff/execuções.",
+  "cases": [
+    {
+      "id": "implementation-standards-primary",
+      "request": "Adicione parâmetro opcional preservando chamadas existentes.",
+      "rubric": "Investigar chamadores, definir default compatível, validar entrada e testar o contrato sem refatorações adjacentes."
+    },
+    {
+      "id": "implementation-standards-scope",
+      "request": "Corrija o parser mantendo os erros documentados.",
+      "rubric": "Preservar intenção/contratos, investigar fatos, respeitar autorização e não ampliar escopo; verificar saída com evidência proporcional."
+    }
+  ]
+}

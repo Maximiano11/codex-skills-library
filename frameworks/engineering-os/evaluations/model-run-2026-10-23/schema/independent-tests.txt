@@ -1,0 +1,9 @@
+exit: 0
+test_does_not_commit_callers_transaction (test_migration.MigrationTest.test_does_not_commit_callers_transaction) ... ok
+test_existing_rows_and_nullable_text_column (test_migration.MigrationTest.test_existing_rows_and_nullable_text_column) ... ok
+test_repeat_preserves_stored_timezone_and_rows (test_migration.MigrationTest.test_repeat_preserves_stored_timezone_and_rows) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.026s
+
+OK

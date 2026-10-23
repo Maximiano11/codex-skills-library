@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "incident-response",
+  "activation": "Incidente ou degradação em operação",
+  "skills": [
+    "prompt-engineer",
+    "production-reliability",
+    "security-auditor",
+    "performance-engineer",
+    "technical-documentation"
+  ],
+  "steps": [
+    {
+      "id": "triage",
+      "depends_on": [],
+      "action": "Determinar impacto, início, sintomas e superfícies autorizadas; preservar evidências"
+    },
+    {
+      "id": "correlate",
+      "depends_on": [
+        "triage"
+      ],
+      "action": "Comparar logs/métricas/traces e mudanças recentes com timestamps sem expor segredos"
+    },
+    {
+      "id": "mitigate",
+      "depends_on": [
+        "correlate"
+      ],
+      "action": "Propor mitigação reversível; executar alterações operacionais somente se autorizadas"
+    },
+    {
+      "id": "confirm",
+      "depends_on": [
+        "mitigate"
+      ],
+      "action": "Medir recuperação pelos mesmos sinais, distinguindo alívio de causa-raiz"
+    },
+    {
+      "id": "learn",
+      "depends_on": [
+        "confirm"
+      ],
+      "action": "Registrar linha do tempo, causa demonstrada, incertezas e ações de prevenção com responsáveis"
+    }
+  ],
+  "approval": "Impacto e recuperação demonstrados; ações executadas autorizadas e evidências preservadas.",
+  "stop": "Ação operacional não autorizada, perda de evidência, recuperação não comprovada ou risco de ampliar impacto.",
+  "outputs": [
+    "Resumo proporcional da decisão/entrega",
+    "Evidências e estado de validação no escopo",
+    "Pendências e limitações relevantes"
+  ],
+  "mode_rule": "Em analyze, explain, audit ou plan, executar somente inspeção e a entrega pedida. Etapas de implementação não ficam autorizadas por selecionar este workflow."
+}

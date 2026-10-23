@@ -1,0 +1,1 @@
+Crie GET /items retornando os itens da constante ITEMS em JSON, status 200 e Content-Type application/json. Preserve /health e 404 para rotas desconhecidas. Use a stack existente.

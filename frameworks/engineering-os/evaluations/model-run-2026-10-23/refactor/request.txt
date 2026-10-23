@@ -1,0 +1,1 @@
+Refatore orders.total extraindo o cálculo para pricing.py, preservando a API orders.total, resultados em centavos e erros existentes. Não adicione dependências.

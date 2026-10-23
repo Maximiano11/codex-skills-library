@@ -1,0 +1,1 @@
+Usuários só podem ler registros de sua própria organização; dentro dela, admin lê qualquer registro e membro lê o próprio. user pode ser None para sessão não autenticada; nesse caso acesso deve ser negado.

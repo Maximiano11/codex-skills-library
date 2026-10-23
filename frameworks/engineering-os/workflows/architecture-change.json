@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "architecture-change",
+  "activation": "Mudança de limites, contratos públicos ou topologia",
+  "skills": [
+    "prompt-engineer",
+    "software-architect",
+    "implementation-standards",
+    "quality-engineer",
+    "code-reviewer",
+    "technical-documentation"
+  ],
+  "steps": [
+    {
+      "id": "map",
+      "depends_on": [],
+      "action": "Mapear limites, dependências, consumidores e restrições observadas"
+    },
+    {
+      "id": "decide",
+      "depends_on": [
+        "map"
+      ],
+      "action": "Comparar alternativas proporcionais e registrar decisão duradoura quando necessária"
+    },
+    {
+      "id": "transition",
+      "depends_on": [
+        "decide"
+      ],
+      "action": "Definir compatibilidade, transição, recuperação e autorização específica"
+    },
+    {
+      "id": "implement",
+      "depends_on": [
+        "transition"
+      ],
+      "action": "Executar incrementalmente as partes autorizadas e reversíveis"
+    },
+    {
+      "id": "verify",
+      "depends_on": [
+        "implement"
+      ],
+      "action": "Conferir contratos e integrações; atualizar ADR/diagramas afetados com evidência"
+    }
+  ],
+  "approval": "Contratos e transição validados; decisão técnica justificada e recuperação conhecida.",
+  "stop": "Quebra não autorizada, consumidor não mapeado ou transição insegura.",
+  "outputs": [
+    "Resumo proporcional da decisão/entrega",
+    "Evidências e estado de validação no escopo",
+    "Pendências e limitações relevantes"
+  ],
+  "mode_rule": "Em analyze, explain, audit ou plan, executar somente inspeção e a entrega pedida. Etapas de implementação não ficam autorizadas por selecionar este workflow."
+}

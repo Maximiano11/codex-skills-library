@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "checks": [
+    {
+      "id": "syntax",
+      "purpose": "build",
+      "kind": "command",
+      "required": true,
+      "argv": ["python3", "-B", "scripts/check.py"]
+    },
+    {
+      "id": "unit-and-integration",
+      "purpose": "tests",
+      "kind": "junit",
+      "required": true,
+      "argv": ["python3", "-B", "scripts/test.py", "--out", "{output}/suite"],
+      "report": "suite/junit.xml",
+      "timeout": 60
+    },
+    {
+      "id": "acceptance-review",
+      "purpose": "acceptance",
+      "kind": "review",
+      "required": true
+    }
+  ]
+}

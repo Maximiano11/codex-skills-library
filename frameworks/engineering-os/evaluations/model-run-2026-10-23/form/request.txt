@@ -1,0 +1,1 @@
+Implemente um formulário local de nome: rótulo visível, envio sem recarregar, nome vazio mostra erro associado ao campo; nome preenchido mostra confirmação local. Não crie conta, backend ou persistência.

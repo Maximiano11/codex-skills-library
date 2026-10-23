@@ -1,0 +1,15 @@
+{
+  "procedure": "Fornecer somente request, SKILL.md e fixture pertinente ao avaliador; manter rubric fora do prompt. Usar cópia isolada e registrar resposta/diff/execuções.",
+  "cases": [
+    {
+      "id": "code-reviewer-primary",
+      "request": "Revise uma extração de módulo preservando API pública.",
+      "rubric": "Conferir imports, chamadores, erros e semântica sem reescrever o módulo por estilo."
+    },
+    {
+      "id": "code-reviewer-scope",
+      "request": "Revise este diff de paginação e isolamento por tenant.",
+      "rubric": "Preservar intenção/contratos, investigar fatos, respeitar autorização e não ampliar escopo; verificar saída com evidência proporcional."
+    }
+  ]
+}

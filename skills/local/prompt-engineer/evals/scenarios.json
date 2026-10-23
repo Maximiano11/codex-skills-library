@@ -1,0 +1,81 @@
+{
+  "procedure": "Para cada caso, materialize files num diretório temporário novo. Forneça apenas request, o diretório e SKILL.md a um agente independente. Capture a resposta fora do fixture. Revise ações, diff, critérios do pedido e verificações realmente executadas. Não fornecer expectativas ou conclusões prévias. Não tratar simulação como garantia universal.",
+  "cases": [
+    {
+      "id": "ui-simple",
+      "title": "Correção simples de interface",
+      "request": "Corrija o texto do botão de envio de Salavr para Salvar em index.html. Preserve o restante.",
+      "files": {
+        "index.html": "<!doctype html>\n<html lang=\"pt-BR\"><meta charset=\"utf-8\"><style>button{padding:12px;background:#172b43;color:white}</style><form><button type=\"submit\">Salavr</button></form></html>\n",
+        "AGENTS.md": "# Fixture isolado\nUse somente a biblioteca padrão e preserve contratos existentes. Testes Python: python3 -B -m unittest discover -v. Não publicar, não instalar pacotes e não acessar dados reais.\n"
+      }
+    },
+    {
+      "id": "new-feature",
+      "title": "Nova funcionalidade",
+      "request": "Adicione a list_tasks um filtro opcional status (open ou done). Sem filtro, preserve a lista atual; status desconhecido deve gerar ValueError. Use a stack existente.",
+      "files": {
+        "tasks.py": "TASKS = [{\"id\": 1, \"status\": \"open\"}, {\"id\": 2, \"status\": \"done\"}]\n\ndef list_tasks():\n    return [dict(task) for task in TASKS]\n",
+        "test_tasks.py": "import unittest\nfrom tasks import list_tasks\n\nclass TasksTest(unittest.TestCase):\n    def test_all(self):\n        self.assertEqual([x[\"id\"] for x in list_tasks()], [1, 2])\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+        "AGENTS.md": "# Fixture isolado\nUse somente a biblioteca padrão e preserve contratos existentes. Testes Python: python3 -B -m unittest discover -v. Não publicar, não instalar pacotes e não acessar dados reais.\n"
+      }
+    },
+    {
+      "id": "complex-bug",
+      "title": "Bug complexo",
+      "request": "Corrija o vazamento intermitente entre organizações no cache de relatórios: após consultar um relatório da organização a, a organização b recebe o mesmo resultado quando usa o mesmo report_id. Preserve a API e o uso de cache. Inclua regressão. A correção neste fixture local sintético está autorizada.",
+      "files": {
+        "reports.py": "CACHE = {}\nREADS = []\n\ndef query(tenant_id, report_id):\n    READS.append((tenant_id, report_id))\n    return {\"tenant_id\": tenant_id, \"report_id\": report_id}\n\ndef get_report(tenant_id, report_id):\n    if report_id not in CACHE:\n        CACHE[report_id] = query(tenant_id, report_id)\n    return dict(CACHE[report_id])\n",
+        "test_reports.py": "import unittest\nimport reports\n\nclass ReportTest(unittest.TestCase):\n    def setUp(self):\n        reports.CACHE.clear()\n        reports.READS.clear()\n    def test_repeat(self):\n        reports.get_report(\"a\", 1)\n        reports.get_report(\"a\", 1)\n        self.assertEqual(len(reports.READS), 1)\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+        "AGENTS.md": "# Fixture isolado\nUse somente a biblioteca padrão e preserve contratos existentes. Testes Python: python3 -B -m unittest discover -v. Não publicar, não instalar pacotes e não acessar dados reais.\n"
+      }
+    },
+    {
+      "id": "architecture",
+      "title": "Refatoração arquitetural",
+      "request": "Extraia a regra de totalização de orders.py para pricing.py. Preserve a API pública orders.total, os resultados em centavos e o comportamento dos chamadores. Não adicione dependências.",
+      "files": {
+        "orders.py": "def total(items):\n    return sum(item[\"unit_cents\"] * item[\"quantity\"] for item in items)\n",
+        "checkout.py": "from orders import total\n\ndef checkout(items):\n    return {\"total_cents\": total(items)}\n",
+        "test_orders.py": "import unittest\nfrom orders import total\nfrom checkout import checkout\n\nclass OrdersTest(unittest.TestCase):\n    def test_total(self):\n        self.assertEqual(total([{\"unit_cents\": 125, \"quantity\": 2}]), 250)\n    def test_empty(self):\n        self.assertEqual(checkout([]), {\"total_cents\": 0})\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+        "AGENTS.md": "# Fixture isolado\nUse somente a biblioteca padrão e preserve contratos existentes. Testes Python: python3 -B -m unittest discover -v. Não publicar, não instalar pacotes e não acessar dados reais.\n"
+      }
+    },
+    {
+      "id": "security-audit",
+      "title": "Auditoria de segurança",
+      "request": "Audite lookup_user para SQL injection. Explique achados e impacto com evidências locais. Não aplique correções nem crie arquivos no projeto.",
+      "files": {
+        "users.py": "def lookup_user(conn, name):\n    return conn.execute(\"SELECT id, name FROM users WHERE name = '\" + name + \"'\").fetchall()\n",
+        "AGENTS.md": "# Fixture isolado\nUse somente a biblioteca padrão e preserve contratos existentes. Testes Python: python3 -B -m unittest discover -v. Não publicar, não instalar pacotes e não acessar dados reais.\n"
+      }
+    },
+    {
+      "id": "explanation",
+      "title": "Apenas explicação",
+      "request": "Explique o que total faz e o significado do valor retornado. Apenas explique.",
+      "files": {
+        "orders.py": "def total(items):\n    return sum(item[\"unit_cents\"] * item[\"quantity\"] for item in items)\n",
+        "AGENTS.md": "# Fixture isolado\nUse somente a biblioteca padrão e preserve contratos existentes. Testes Python: python3 -B -m unittest discover -v. Não publicar, não instalar pacotes e não acessar dados reais.\n"
+      }
+    },
+    {
+      "id": "ambiguous",
+      "title": "Solicitação ambígua",
+      "request": "Mude o desconto padrão para ficar melhor.",
+      "files": {
+        "discounts.py": "DEFAULT_DISCOUNT_PERCENT = 5\n\ndef discounted(cents):\n    return cents * (100 - DEFAULT_DISCOUNT_PERCENT) // 100\n",
+        "AGENTS.md": "# Fixture isolado\nUse somente a biblioteca padrão e preserve contratos existentes. Testes Python: python3 -B -m unittest discover -v. Não publicar, não instalar pacotes e não acessar dados reais.\n"
+      }
+    },
+    {
+      "id": "plan-only",
+      "title": "Planejamento sem implementação",
+      "request": "Apresente um plano para migrar o armazenamento JSON para SQLite preservando o contrato load/save e os dados. Não implemente nem crie arquivos.",
+      "files": {
+        "storage.py": "import json\nfrom pathlib import Path\n\ndef load(path):\n    return json.loads(Path(path).read_text())\n\ndef save(path, value):\n    Path(path).write_text(json.dumps(value))\n",
+        "AGENTS.md": "# Fixture isolado\nUse somente a biblioteca padrão e preserve contratos existentes. Testes Python: python3 -B -m unittest discover -v. Não publicar, não instalar pacotes e não acessar dados reais.\n"
+      }
+    }
+  ]
+}

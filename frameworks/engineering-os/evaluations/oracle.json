@@ -1,0 +1,108 @@
+{
+  "kind": "deterministic-triage-oracle-not-model-results",
+  "cases": [
+    {
+      "id": "css",
+      "risk": "low",
+      "skills_include": [
+        "product-ux"
+      ],
+      "mode": null,
+      "readonly": false,
+      "no_change_until_clarification": false
+    },
+    {
+      "id": "form",
+      "risk": "medium",
+      "skills_include": [
+        "product-ux",
+        "quality-engineer"
+      ],
+      "mode": null,
+      "readonly": false,
+      "no_change_until_clarification": false
+    },
+    {
+      "id": "endpoint",
+      "risk": "medium",
+      "skills_include": [
+        "software-architect",
+        "quality-engineer"
+      ],
+      "mode": null,
+      "readonly": false,
+      "no_change_until_clarification": false
+    },
+    {
+      "id": "refactor",
+      "risk": "medium",
+      "skills_include": [
+        "quality-engineer"
+      ],
+      "mode": null,
+      "readonly": false,
+      "no_change_until_clarification": false
+    },
+    {
+      "id": "scroll-drag",
+      "risk": "medium",
+      "skills_include": [
+        "product-ux",
+        "quality-engineer"
+      ],
+      "mode": null,
+      "readonly": false,
+      "no_change_until_clarification": false
+    },
+    {
+      "id": "schema",
+      "risk": "high",
+      "skills_include": [
+        "database-engineer",
+        "quality-engineer"
+      ],
+      "mode": null,
+      "readonly": false,
+      "no_change_until_clarification": false
+    },
+    {
+      "id": "auth-audit",
+      "risk": "high",
+      "skills_include": [
+        "security-auditor"
+      ],
+      "mode": "audit",
+      "readonly": true,
+      "no_change_until_clarification": false
+    },
+    {
+      "id": "release",
+      "risk": "high",
+      "skills_include": [
+        "release-manager",
+        "quality-engineer"
+      ],
+      "mode": "plan",
+      "readonly": true,
+      "no_change_until_clarification": false
+    },
+    {
+      "id": "ambiguous",
+      "risk": "high",
+      "skills_include": [],
+      "mode": null,
+      "readonly": false,
+      "no_change_until_clarification": true
+    },
+    {
+      "id": "analysis-only",
+      "risk": "high",
+      "skills_include": [
+        "security-auditor"
+      ],
+      "mode": "analyze",
+      "readonly": true,
+      "no_change_until_clarification": false
+    }
+  ]
+}

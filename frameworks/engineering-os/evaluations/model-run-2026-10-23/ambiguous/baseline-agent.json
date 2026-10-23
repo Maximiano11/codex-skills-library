@@ -1,0 +1,10 @@
+{
+  "discounts.py": {
+    "sha256": "f3bb302ae1f514a733d5a0ba4d8311c5aaf2b3e6cc06891a2409d56058a2a0bd",
+    "text": "DEFAULT_PERCENT = 5\n\ndef price(cents):\n    return cents * (100 - DEFAULT_PERCENT) // 100\n"
+  },
+  "AGENTS.md": {
+    "sha256": "c4625771d05accd295fc23ba1133cf7f86039b6dc13f6afe0001182b3c775409",
+    "text": "# Fixture de avalia\u00e7\u00e3o isolado\nUse a stack existente e dados sint\u00e9ticos. Python: python3 -B -m unittest discover -v.\nN\u00e3o instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm an\u00e1lise/auditoria/plano, preserve arquivos; evid\u00eancias de avalia\u00e7\u00e3o ficam fora do fixture.\n"
+  }
+}

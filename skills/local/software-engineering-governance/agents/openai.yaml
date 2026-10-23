@@ -1,0 +1,6 @@
+interface:
+  display_name: "Software Engineering Governance"
+  short_description: "Engenharia, risco e QA com evidências verificáveis"
+  default_prompt: "Use $software-engineering-governance para analisar esta demanda, implementar no escopo autorizado e validar com evidências."
+policy:
+  allow_implicit_invocation: true

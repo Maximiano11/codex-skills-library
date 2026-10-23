@@ -1,0 +1,3403 @@
+{
+  "version": 1,
+  "source_sha256": "4ab43e69d2ec638b5af2d518f0b4a983ab017c8f607018678451d2cfa4e49de3",
+  "note": "Paráfrases operacionais das perguntas 1–120; métodos, severidades e mapeamentos são adaptações da skill, não texto normativo. Ver references/quality-model.md.",
+  "criteria": [
+    {
+      "id": "ART-001",
+      "category": "functional_suitability",
+      "title": "Funções requeridas",
+      "description": "Confrontar requisitos aprovados com funções implementadas e demonstrar cada resultado.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 1,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Adequação Funcional"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-002",
+      "category": "functional_suitability",
+      "title": "Funções essenciais operantes",
+      "description": "Executar os fluxos essenciais identificados, incluindo seus erros relevantes.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 2,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Adequação Funcional"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-003",
+      "category": "functional_suitability",
+      "title": "Resultados corretos",
+      "description": "Comparar saídas com exemplos calculados ou especificados independentemente.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 3,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Precisão"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-004",
+      "category": "functional_suitability",
+      "title": "Precisão e confiança dos resultados",
+      "description": "Testar limites e precisão definida pelo domínio, sem inventar tolerâncias.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 4,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Precisão"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-005",
+      "category": "compatibility",
+      "title": "Interação com outros sistemas",
+      "description": "Executar contrato de integração em serviço isolado ou simulado e observar troca de dados.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 5,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Interoperabilidade"
+      },
+      "iso_2011_mapping": [
+        "compatibility",
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "compatibility",
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-006",
+      "category": "compatibility",
+      "title": "Protocolos de integração compatíveis",
+      "description": "Confrontar versões e formatos suportados e testar mensagens válidas e inválidas.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 6,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Interoperabilidade"
+      },
+      "iso_2011_mapping": [
+        "compatibility",
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "compatibility",
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-007",
+      "category": "security",
+      "title": "Proteção de dados e operações",
+      "description": "Revisar ameaças e testar controles que protegem dados e operações sensíveis.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 7,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Segurança Funcional"
+      },
+      "iso_2011_mapping": [
+        "security",
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "security",
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-008",
+      "category": "security",
+      "title": "Autenticação, autorização e criptografia",
+      "description": "Testar identidade, permissão por recurso e proteção criptográfica aplicável.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 8,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Segurança Funcional"
+      },
+      "iso_2011_mapping": [
+        "security",
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "security",
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-009",
+      "category": "functional_suitability",
+      "title": "Testes funcionais abrangentes",
+      "description": "Confrontar casos executados com requisitos e registrar lacunas de cobertura funcional.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 9,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Testes de Funcionalidade"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-010",
+      "category": "functional_suitability",
+      "title": "Diversidade de casos de uso",
+      "description": "Executar positivos, negativos e fronteiras dos casos de uso afetados.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 10,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Testes de Funcionalidade"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-011",
+      "category": "functional_suitability",
+      "title": "Avaliação funcional por usuários",
+      "description": "Registrar observação de usuários representativos, tarefas e resultados, sem inventar participantes.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 11,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Feedback do Usuário"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-012",
+      "category": "functional_suitability",
+      "title": "Feedback funcional considerado",
+      "description": "Vincular feedback coletado a decisão documentada e eventual reteste.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 12,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Feedback do Usuário"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-013",
+      "category": "functional_suitability",
+      "title": "Documentação das funções",
+      "description": "Comparar documentação com comportamentos realmente disponíveis.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 13,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Documentação de Funcionalidades"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-014",
+      "category": "functional_suitability",
+      "title": "Guias de todas as funções ofertadas",
+      "description": "Verificar acesso e exatidão dos guias para as funções no escopo.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 14,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Documentação de Funcionalidades"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-015",
+      "category": "functional_suitability",
+      "title": "Tratamento de problemas funcionais",
+      "description": "Provocar erro isolado e verificar recuperação, mensagem e ausência de efeito indevido.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 15,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Resolução de Problemas"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-016",
+      "category": "functional_suitability",
+      "title": "Canais de suporte",
+      "description": "Conferir canal disponível e procedimento de resposta sem enviar mensagens não autorizadas.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 16,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Resolução de Problemas"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-017",
+      "category": "functional_suitability",
+      "title": "Correção contínua de falhas",
+      "description": "Examinar histórico de defeitos e correções com regressões executadas.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 17,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Atualizações e Manutenção"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-018",
+      "category": "functional_suitability",
+      "title": "Procedimento de manutenção funcional",
+      "description": "Verificar responsáveis e processo de manutenção existente e aplicável.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 18,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Atualizações e Manutenção"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-019",
+      "category": "functional_suitability",
+      "title": "Padrões funcionais aplicáveis",
+      "description": "Identificar padrões adotados e verificar critérios específicos com fonte verificável.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 19,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Conformidade com Padrões"
+      },
+      "iso_2011_mapping": [
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-020",
+      "category": "security",
+      "title": "Obrigações funcionais, segurança e desempenho",
+      "description": "Identificar obrigações efetivas e evidências, sem inferir conformidade legal ou normativa.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 7,
+        "figure": 1,
+        "question": 20,
+        "original_group": "Funcionalidade",
+        "original_subheading": "Conformidade com Padrões"
+      },
+      "iso_2011_mapping": [
+        "security",
+        "functional_suitability"
+      ],
+      "iso_2023_mapping": [
+        "security",
+        "functional_suitability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-021",
+      "category": "reliability",
+      "title": "Maturidade e prevenção de falhas",
+      "description": "Analisar falhas observadas e resultados de cenários críticos do período definido.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 21,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Maturidade"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-022",
+      "category": "reliability",
+      "title": "Estabilidade demonstrada em testes",
+      "description": "Revisar testes executados e incidentes no escopo, sem inferir prontidão de produção apenas do código.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 22,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Maturidade"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-023",
+      "category": "reliability",
+      "title": "Continuidade diante de falhas",
+      "description": "Injetar falha controlada em dependência e observar degradação/continuidade esperada.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 23,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Tolerância a Falhas"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-024",
+      "category": "reliability",
+      "title": "Recuperação automática",
+      "description": "Interromper componente isolado e verificar retomada sem efeitos duplicados.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 24,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Tolerância a Falhas"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-025",
+      "category": "reliability",
+      "title": "Recuperação de dados",
+      "description": "Executar recuperação de dados sintéticos e conferir completude e integridade.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 25,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Capacidade de Recuperação"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-026",
+      "category": "reliability",
+      "title": "Restauração do estado operacional",
+      "description": "Restaurar fixture de incidente e comparar estado final com o esperado.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 26,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Capacidade de Recuperação"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-027",
+      "category": "reliability",
+      "title": "Testes de confiabilidade",
+      "description": "Relacionar falhas esperadas a casos executados de continuidade e recuperação.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 27,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Testes de Confiabilidade"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-028",
+      "category": "reliability",
+      "title": "Simulações de falha e recuperação",
+      "description": "Executar cenários adversos seguros e registrar tempos/efeitos observados.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 28,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Testes de Confiabilidade"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-029",
+      "category": "reliability",
+      "title": "Detecção e registro de falhas",
+      "description": "Provocar erro isolado e conferir evento observável sem dados sensíveis.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 29,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Monitoramento de Falhas"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-030",
+      "category": "reliability",
+      "title": "Logs e alertas diagnósticos",
+      "description": "Verificar correlação, diagnóstico e alerta em ambiente de teste, sem notificar pessoas reais.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 30,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Monitoramento de Falhas"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-031",
+      "category": "reliability",
+      "title": "Procedimentos de backup",
+      "description": "Revisar frequência, retenção, responsáveis e execução documentada do backup.",
+      "severity": "high",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 31,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Backup e Restauração"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-032",
+      "category": "reliability",
+      "title": "Backup e restauração íntegros",
+      "description": "Restaurar cópia sintética e comparar dados; existência de backup sozinha não basta.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 32,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Backup e Restauração"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-033",
+      "category": "reliability",
+      "title": "Padrões de confiabilidade",
+      "description": "Identificar padrões assumidos e verificar requisitos concretos aplicáveis.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 33,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Conformidade com Padrões"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-034",
+      "category": "security",
+      "title": "Obrigações de segurança e integridade",
+      "description": "Confrontar obrigações identificadas com proteção e integridade demonstradas.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 34,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Conformidade com Padrões"
+      },
+      "iso_2011_mapping": [
+        "security",
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "security",
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-035",
+      "category": "security",
+      "title": "Resiliência a ataques",
+      "description": "Avaliar ameaças e testar controles autorizados em ambiente isolado.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 35,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Resiliência a Ataques"
+      },
+      "iso_2011_mapping": [
+        "security",
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "security",
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-036",
+      "category": "security",
+      "title": "Práticas contra violações e falhas de segurança",
+      "description": "Revisar configurações/controles e testar negativos de segurança pertinentes.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 36,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Resiliência a Ataques"
+      },
+      "iso_2011_mapping": [
+        "security",
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "security",
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-037",
+      "category": "reliability",
+      "title": "Histórico de falhas",
+      "description": "Verificar registro de incidentes com causa, impacto e evidências.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 37,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Histórico de Falhas"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-038",
+      "category": "reliability",
+      "title": "Aprendizado com falhas anteriores",
+      "description": "Vincular incidente a ação corretiva e regressão capaz de impedir reincidência.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 38,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Histórico de Falhas"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-039",
+      "category": "reliability",
+      "title": "Auditorias de confiabilidade",
+      "description": "Examinar auditorias realmente realizadas e tratamento de pendências.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 39,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Auditorias de Confiabilidade"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-040",
+      "category": "reliability",
+      "title": "Revisões de confiabilidade e vulnerabilidades",
+      "description": "Verificar revisão recente, cobertura e ações sobre riscos identificados.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 8,
+        "figure": 2,
+        "question": 40,
+        "original_group": "Confiabilidade",
+        "original_subheading": "Auditorias de Confiabilidade"
+      },
+      "iso_2011_mapping": [
+        "reliability"
+      ],
+      "iso_2023_mapping": [
+        "reliability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-041",
+      "category": "usability",
+      "title": "Clareza da interface",
+      "description": "Observar usuários ou executar tarefas representativas e registrar compreensão de funções.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 41,
+        "original_group": "Usabilidade",
+        "original_subheading": "Compreensibilidade"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-042",
+      "category": "usability",
+      "title": "Consistência de menus e controles",
+      "description": "Inspecionar navegação real, rótulos e estados nos fluxos afetados.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 42,
+        "original_group": "Usabilidade",
+        "original_subheading": "Compreensibilidade"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-043",
+      "category": "usability",
+      "title": "Recursos para aprendizagem",
+      "description": "Conferir guias e ajuda com tarefa inicial representativa.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 43,
+        "original_group": "Usabilidade",
+        "original_subheading": "Aprendizagem"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-044",
+      "category": "usability",
+      "title": "Aprendizagem das funções principais",
+      "description": "Observar tarefa inicial e comparar com meta previamente definida, sem inventar tempo aceitável.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 44,
+        "original_group": "Usabilidade",
+        "original_subheading": "Aprendizagem"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-045",
+      "category": "usability",
+      "title": "Operação eficiente",
+      "description": "Executar tarefa de ponta a ponta e observar passos, erros e resultado.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 45,
+        "original_group": "Usabilidade",
+        "original_subheading": "Operabilidade"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-046",
+      "category": "usability",
+      "title": "Atalhos e personalização operacional",
+      "description": "Verificar atalhos/configurações existentes e uso por teclado quando aplicável.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 46,
+        "original_group": "Usabilidade",
+        "original_subheading": "Operabilidade"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-047",
+      "category": "usability",
+      "title": "Atratividade visual",
+      "description": "Aplicar rubrica visual previamente acordada e registrar avaliação humana separada dos testes.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 47,
+        "original_group": "Usabilidade",
+        "original_subheading": "Atratividade"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-048",
+      "category": "usability",
+      "title": "Elementos gráficos e experiência",
+      "description": "Inspecionar legibilidade, hierarquia e consistência visual na aplicação real.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 48,
+        "original_group": "Usabilidade",
+        "original_subheading": "Atratividade"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-049",
+      "category": "usability",
+      "title": "Diretrizes de usabilidade adotadas",
+      "description": "Identificar diretriz/edição e verificar seus critérios aplicáveis, sem alegar conformidade geral.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 49,
+        "original_group": "Usabilidade",
+        "original_subheading": "Conformidade com Normas de Usabilidade"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-050",
+      "category": "usability",
+      "title": "Padrões de interação consistentes",
+      "description": "Operar controles reais e confrontar convenções do design system existente.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 50,
+        "original_group": "Usabilidade",
+        "original_subheading": "Conformidade com Normas de Usabilidade"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-051",
+      "category": "usability",
+      "title": "Feedback imediato e claro",
+      "description": "Executar ação e verificar confirmação, erro e carregamento sem atraso enganoso.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 51,
+        "original_group": "Usabilidade",
+        "original_subheading": "Feedback do Usuário"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-052",
+      "category": "usability",
+      "title": "Orientação visual e mensagens",
+      "description": "Inspecionar estados que orientam o usuário e verificar texto compreensível.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 52,
+        "original_group": "Usabilidade",
+        "original_subheading": "Feedback do Usuário"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-053",
+      "category": "usability",
+      "title": "Personalização da interface",
+      "description": "Testar preferências oferecidas e persistência após nova sessão de teste.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 53,
+        "original_group": "Usabilidade",
+        "original_subheading": "Customização da Interface"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-054",
+      "category": "usability",
+      "title": "Ajustes de layout, cor e fonte",
+      "description": "Operar opções existentes e verificar legibilidade/resultado; não exigir recurso inexistente sem requisito.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 54,
+        "original_group": "Usabilidade",
+        "original_subheading": "Customização da Interface"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-055",
+      "category": "usability",
+      "title": "Estrutura lógica de navegação",
+      "description": "Percorrer rotas e localizar funcionalidades com navegação real.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 55,
+        "original_group": "Usabilidade",
+        "original_subheading": "Facilidade de Navegação"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-056",
+      "category": "usability",
+      "title": "Localização simples de conteúdo",
+      "description": "Executar tarefas de busca/localização e observar caminhos e erros.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 56,
+        "original_group": "Usabilidade",
+        "original_subheading": "Facilidade de Navegação"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-057",
+      "category": "usability",
+      "title": "Testes com usuários reais",
+      "description": "Registrar protocolo, participantes autorizados e resultados; testes automatizados não substituem este item.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 57,
+        "original_group": "Usabilidade",
+        "original_subheading": "Testes de Usabilidade"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-058",
+      "category": "usability",
+      "title": "Melhorias a partir de testes de usabilidade",
+      "description": "Vincular achados de usuários a mudanças e reavaliação documentada.",
+      "severity": "medium",
+      "verification": {
+        "type": "manual_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 58,
+        "original_group": "Usabilidade",
+        "original_subheading": "Testes de Usabilidade"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-059",
+      "category": "usability",
+      "title": "Documentação de uso acessível",
+      "description": "Conferir localização, legibilidade e correspondência das orientações com a interface.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 59,
+        "original_group": "Usabilidade",
+        "original_subheading": "Documentação e Suporte"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-060",
+      "category": "usability",
+      "title": "Tutoriais e assistência",
+      "description": "Verificar recursos de ajuda disponíveis e resolução de dúvidas representativas.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 9,
+        "figure": 3,
+        "question": 60,
+        "original_group": "Usabilidade",
+        "original_subheading": "Documentação e Suporte"
+      },
+      "iso_2011_mapping": [
+        "usability"
+      ],
+      "iso_2023_mapping": [
+        "interaction_capability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-061",
+      "category": "performance_efficiency",
+      "title": "Tempo de resposta",
+      "description": "Medir operações relevantes em ambiente/carga descritos e comparar com meta aprovada.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 61,
+        "original_group": "Eficiência",
+        "original_subheading": "Comportamento em Relação ao Tempo"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-062",
+      "category": "performance_efficiency",
+      "title": "Rapidez das ações do usuário",
+      "description": "Medir latência percebida e feedback dos fluxos afetados sob carga definida.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 62,
+        "original_group": "Eficiência",
+        "original_subheading": "Comportamento em Relação ao Tempo"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-063",
+      "category": "performance_efficiency",
+      "title": "Uso eficiente de recursos",
+      "description": "Medir recursos em cenário reproduzível e confrontar orçamento definido.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 63,
+        "original_group": "Eficiência",
+        "original_subheading": "Comportamento em Relação aos Recursos"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-064",
+      "category": "performance_efficiency",
+      "title": "Consumo de memória e CPU",
+      "description": "Registrar memória/CPU e limites aceitos, incluindo duração e ambiente da medição.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 64,
+        "original_group": "Eficiência",
+        "original_subheading": "Comportamento em Relação aos Recursos"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-065",
+      "category": "performance_efficiency",
+      "title": "Processos computacionais eficientes",
+      "description": "Perfilar operações críticas e justificar gargalos/otimizações com dados.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 65,
+        "original_group": "Eficiência",
+        "original_subheading": "Otimização de Processos"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-066",
+      "category": "performance_efficiency",
+      "title": "Tempo de execução e utilização de recursos",
+      "description": "Comparar medições antes/depois para o mesmo cenário e dados.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 66,
+        "original_group": "Eficiência",
+        "original_subheading": "Otimização de Processos"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-067",
+      "category": "performance_efficiency",
+      "title": "Overhead reduzido",
+      "description": "Medir trabalho adicional e verificar seu custo em relação à tarefa necessária.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 67,
+        "original_group": "Eficiência",
+        "original_subheading": "Minimização de Overhead"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-068",
+      "category": "performance_efficiency",
+      "title": "Ausência de tarefas desnecessárias",
+      "description": "Identificar processos/tarefas redundantes por profiling e revisar efeitos de removê-los.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 68,
+        "original_group": "Eficiência",
+        "original_subheading": "Minimização de Overhead"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-069",
+      "category": "performance_efficiency",
+      "title": "Monitoramento de tempo e recursos",
+      "description": "Verificar métricas reais em cenário de teste conhecido.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 69,
+        "original_group": "Eficiência",
+        "original_subheading": "Monitoramento de Desempenho"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-070",
+      "category": "performance_efficiency",
+      "title": "Indicadores para identificar gargalos",
+      "description": "Conferir métricas acessíveis ao perfil adequado e correlação com gargalo simulado.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 70,
+        "original_group": "Eficiência",
+        "original_subheading": "Monitoramento de Desempenho"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-071",
+      "category": "performance_efficiency",
+      "title": "Algoritmos otimizados",
+      "description": "Comparar algoritmo atual e alternativas relevantes usando dados representativos.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 71,
+        "original_group": "Eficiência",
+        "original_subheading": "Otimização de Algoritmos"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-072",
+      "category": "performance_efficiency",
+      "title": "Eficácia das otimizações",
+      "description": "Executar benchmark com correção de resultados preservada e comparar baseline.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 72,
+        "original_group": "Eficiência",
+        "original_subheading": "Otimização de Algoritmos"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-073",
+      "category": "performance_efficiency",
+      "title": "Padrões de eficiência aplicáveis",
+      "description": "Identificar padrão/objetivo assumido e medir o atendimento.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 73,
+        "original_group": "Eficiência",
+        "original_subheading": "Conformidade com Padrões de Eficiência"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-074",
+      "category": "performance_efficiency",
+      "title": "Diretrizes de desempenho",
+      "description": "Revisar diretrizes adotadas e verificar impacto em cenário medido.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 74,
+        "original_group": "Eficiência",
+        "original_subheading": "Conformidade com Padrões de Eficiência"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-075",
+      "category": "performance_efficiency",
+      "title": "Crescimento de dados e usuários",
+      "description": "Executar carga isolada com volumes definidos e observar degradação.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 75,
+        "original_group": "Eficiência",
+        "original_subheading": "Escalabilidade"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-076",
+      "category": "performance_efficiency",
+      "title": "Escala gradual",
+      "description": "Avaliar capacidade e gargalos ao aumentar demanda em ambiente autorizado.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 76,
+        "original_group": "Eficiência",
+        "original_subheading": "Escalabilidade"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-077",
+      "category": "performance_efficiency",
+      "title": "Consultas eficientes",
+      "description": "Inspecionar plano de consulta e medir operações críticas com dados sintéticos.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 77,
+        "original_group": "Eficiência",
+        "original_subheading": "Otimização de Consultas e Acesso a Dados"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-078",
+      "category": "performance_efficiency",
+      "title": "Índices e cache adequados",
+      "description": "Conferir necessidade por plano/medição e testar consistência/invalidação do cache aplicável.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 78,
+        "original_group": "Eficiência",
+        "original_subheading": "Otimização de Consultas e Acesso a Dados"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-079",
+      "category": "performance_efficiency",
+      "title": "Testes de desempenho representativos",
+      "description": "Executar carga descrita que represente o uso esperado, sem atingir produção.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 79,
+        "original_group": "Eficiência",
+        "original_subheading": "Testes de Desempenho"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-080",
+      "category": "performance_efficiency",
+      "title": "Melhorias a partir de resultados de desempenho",
+      "description": "Vincular achado de benchmark a mudança e medição posterior.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 10,
+        "figure": 4,
+        "question": 80,
+        "original_group": "Eficiência",
+        "original_subheading": "Testes de Desempenho"
+      },
+      "iso_2011_mapping": [
+        "performance_efficiency"
+      ],
+      "iso_2023_mapping": [
+        "performance_efficiency"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-081",
+      "category": "maintainability",
+      "title": "Código compreensível e documentado",
+      "description": "Revisar estrutura e documentação do módulo e explicar seu fluxo com fontes.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 81,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Analisabilidade"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-082",
+      "category": "maintainability",
+      "title": "Diagnóstico e compreensão rápida",
+      "description": "Reproduzir defeito e identificar causa com logs/código; registrar obstáculos.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 82,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Analisabilidade"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-083",
+      "category": "maintainability",
+      "title": "Modularidade e extensão",
+      "description": "Avaliar fronteiras e implementar mudança representativa sem acoplamento indevido.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 83,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Modificabilidade"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-084",
+      "category": "maintainability",
+      "title": "Mudanças com integridade e estabilidade",
+      "description": "Revisar impacto e executar regressões do componente e consumidores.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 84,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Modificabilidade"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-085",
+      "category": "maintainability",
+      "title": "Estabilidade após modificação",
+      "description": "Executar cenários existentes e conferir invariantes após a mudança.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 85,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Estabilidade"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-086",
+      "category": "maintainability",
+      "title": "Resistência a falhas de código/configuração",
+      "description": "Testar configuração inválida e erros controlados de forma segura.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 86,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Estabilidade"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-087",
+      "category": "maintainability",
+      "title": "Facilidade de testar",
+      "description": "Executar teste isolado com setup determinístico e observar dependências difíceis de controlar.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 87,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Testabilidade"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-088",
+      "category": "maintainability",
+      "title": "Ferramentas de automação e cobertura",
+      "description": "Detectar runner e examinar cobertura relevante sem confundir percentual com qualidade.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 88,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Testabilidade"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-089",
+      "category": "maintainability",
+      "title": "Padrões de código",
+      "description": "Executar linter existente ou revisão pelas convenções adotadas.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 89,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Padrões de Codificação"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-090",
+      "category": "maintainability",
+      "title": "Nomenclatura e estrutura consistentes",
+      "description": "Confrontar módulo alterado com convenções reais do projeto.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 90,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Padrões de Codificação"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-091",
+      "category": "maintainability",
+      "title": "Refatoração orientada à manutenção",
+      "description": "Revisar refatorações justificadas e comprovar preservação de comportamento.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 91,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Refatoração de Código"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-092",
+      "category": "maintainability",
+      "title": "Remoção de duplicação e complexidade",
+      "description": "Identificar duplicação concreta e avaliar simplificação com regressão.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 92,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Refatoração de Código"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-093",
+      "category": "maintainability",
+      "title": "Documentação interna fiel",
+      "description": "Confrontar comentários/design com responsabilidades e comportamento implementados.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 93,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Documentação de Código"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-094",
+      "category": "maintainability",
+      "title": "Documentação que permite mudanças seguras",
+      "description": "Verificar se contrato, invariantes e decisões relevantes estão registrados.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 94,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Documentação de Código"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-095",
+      "category": "maintainability",
+      "title": "Controle de versões e configuração",
+      "description": "Inspecionar estratégia existente de versionamento/configuração e histórico relevante.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 95,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Gestão de Configuração"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-096",
+      "category": "maintainability",
+      "title": "Rastreabilidade e integridade das mudanças",
+      "description": "Vincular demanda, diff, decisão e evidência ao estado de fonte avaliado.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 96,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Gestão de Configuração"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-097",
+      "category": "maintainability",
+      "title": "Reutilização apropriada de componentes",
+      "description": "Revisar duplicação e usar componentes existentes quando adequados.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 97,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Reutilização de Componentes"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-098",
+      "category": "maintainability",
+      "title": "Uso de bibliotecas e frameworks",
+      "description": "Verificar compatibilidade, manutenção e necessidade de dependências utilizadas.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 98,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Reutilização de Componentes"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-099",
+      "category": "maintainability",
+      "title": "Política de manutenção",
+      "description": "Conferir responsabilidades e procedimentos efetivamente adotados.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 99,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Políticas de Manutenção"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-100",
+      "category": "maintainability",
+      "title": "Decisões de manutenção sustentável",
+      "description": "Registrar tradeoffs de manutenção e sustentabilidade da decisão relevante.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 11,
+        "figure": 5,
+        "question": 100,
+        "original_group": "Manutenibilidade",
+        "original_subheading": "Políticas de Manutenção"
+      },
+      "iso_2011_mapping": [
+        "maintainability"
+      ],
+      "iso_2023_mapping": [
+        "maintainability"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-101",
+      "category": "portability",
+      "title": "Adaptação a ambientes e sistemas",
+      "description": "Confrontar matriz de ambientes suportados e executar cenários relevantes.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 101,
+        "original_group": "Portabilidade",
+        "original_subheading": "Adaptabilidade"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-102",
+      "category": "portability",
+      "title": "Compatibilidade de plataforma e hardware",
+      "description": "Testar configurações declaradas; não presumir suporte universal.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 102,
+        "original_group": "Portabilidade",
+        "original_subheading": "Adaptabilidade"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-103",
+      "category": "portability",
+      "title": "Instalação em ambientes diferentes",
+      "description": "Executar instalação limpa descartável com versões e instruções declaradas.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 103,
+        "original_group": "Portabilidade",
+        "original_subheading": "Instalabilidade"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-104",
+      "category": "portability",
+      "title": "Instalação compreensível ao público",
+      "description": "Seguir guia pelo perfil esperado e registrar dependências/etapas faltantes.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 104,
+        "original_group": "Portabilidade",
+        "original_subheading": "Instalabilidade"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-105",
+      "category": "compatibility",
+      "title": "Coexistência com outros sistemas",
+      "description": "Executar sistemas isolados lado a lado e observar uso compartilhado de recursos.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 105,
+        "original_group": "Portabilidade",
+        "original_subheading": "Coexistência"
+      },
+      "iso_2011_mapping": [
+        "compatibility",
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "compatibility",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-106",
+      "category": "compatibility",
+      "title": "Ausência de interferência e conflito",
+      "description": "Testar portas, arquivos e recursos concorrentes nos ambientes suportados.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 106,
+        "original_group": "Portabilidade",
+        "original_subheading": "Coexistência"
+      },
+      "iso_2011_mapping": [
+        "compatibility",
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "compatibility",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-107",
+      "category": "portability",
+      "title": "Substituição sem perda funcional",
+      "description": "Executar cenário de transição e comparar funções e continuidade previstas.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 107,
+        "original_group": "Portabilidade",
+        "original_subheading": "Substituibilidade"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-108",
+      "category": "portability",
+      "title": "Migração de dados e configurações",
+      "description": "Migrar dados sintéticos, validar integridade e estratégia de reversão.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 108,
+        "original_group": "Portabilidade",
+        "original_subheading": "Substituibilidade"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-109",
+      "category": "compatibility",
+      "title": "Padrões de interface e protocolo",
+      "description": "Confrontar contratos e protocolos declarados e executar interoperabilidade.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 109,
+        "original_group": "Portabilidade",
+        "original_subheading": "Padrões de Interface"
+      },
+      "iso_2011_mapping": [
+        "compatibility",
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "compatibility",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-110",
+      "category": "compatibility",
+      "title": "Convenções que favorecem integração",
+      "description": "Verificar interoperabilidade dos contratos com consumidores representativos.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 110,
+        "original_group": "Portabilidade",
+        "original_subheading": "Padrões de Interface"
+      },
+      "iso_2011_mapping": [
+        "compatibility",
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "compatibility",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-111",
+      "category": "compatibility",
+      "title": "Compatibilidade com versões anteriores",
+      "description": "Executar contrato/cliente anterior suportado contra a mudança.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 111,
+        "original_group": "Portabilidade",
+        "original_subheading": "Compatibilidade com Versões Anteriores"
+      },
+      "iso_2011_mapping": [
+        "compatibility",
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "compatibility",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-112",
+      "category": "compatibility",
+      "title": "Migração de dados entre versões",
+      "description": "Testar importação/migração reversível de fixture da versão anterior.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 112,
+        "original_group": "Portabilidade",
+        "original_subheading": "Compatibilidade com Versões Anteriores"
+      },
+      "iso_2011_mapping": [
+        "compatibility",
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "compatibility",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-113",
+      "category": "portability",
+      "title": "Testes de portabilidade",
+      "description": "Executar matriz de ambientes efetivamente suportados e registrar lacunas.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 113,
+        "original_group": "Portabilidade",
+        "original_subheading": "Testes de Portabilidade"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-114",
+      "category": "portability",
+      "title": "Simulação de ambientes diversos",
+      "description": "Executar configurações representativas isoladas sem alegar cobrir todos os ambientes possíveis.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 114,
+        "original_group": "Portabilidade",
+        "original_subheading": "Testes de Portabilidade"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-115",
+      "category": "portability",
+      "title": "Guia de instalação por plataforma",
+      "description": "Comparar instruções com instalação executada em plataformas no escopo.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 115,
+        "original_group": "Portabilidade",
+        "original_subheading": "Documentação de Instalação"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-116",
+      "category": "portability",
+      "title": "Instruções de configuração e implantação",
+      "description": "Seguir passos em ambiente descartável e registrar resultados; deploy real exige autorização.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 116,
+        "original_group": "Portabilidade",
+        "original_subheading": "Documentação de Instalação"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-117",
+      "category": "compatibility",
+      "title": "Importação e exportação compatíveis",
+      "description": "Executar round-trip de dados sintéticos e conferir formato e integridade.",
+      "severity": "medium",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 117,
+        "original_group": "Portabilidade",
+        "original_subheading": "Compatibilidade de Dados"
+      },
+      "iso_2011_mapping": [
+        "compatibility",
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "compatibility",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-118",
+      "category": "compatibility",
+      "title": "Padrões para troca de dados",
+      "description": "Validar contratos de importação/exportação e integração com consumidores suportados.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 118,
+        "original_group": "Portabilidade",
+        "original_subheading": "Compatibilidade de Dados"
+      },
+      "iso_2011_mapping": [
+        "compatibility",
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "compatibility",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-119",
+      "category": "security",
+      "title": "Distribuição de atualizações e patches",
+      "description": "Revisar processo de atualização, integridade, continuidade e correção de vulnerabilidades.",
+      "severity": "high",
+      "verification": {
+        "type": "test_or_observation"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 119,
+        "original_group": "Portabilidade",
+        "original_subheading": "Atualizações e Patches"
+      },
+      "iso_2011_mapping": [
+        "security",
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "security",
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    },
+    {
+      "id": "ART-120",
+      "category": "portability",
+      "title": "Orientações sobre atualizações",
+      "description": "Conferir instruções e canais documentados sem disparar notificações reais.",
+      "severity": "medium",
+      "verification": {
+        "type": "review"
+      },
+      "evidence_required": true,
+      "status": "not_verified",
+      "origin": "article_paraphrase",
+      "source": {
+        "document": "garcia-et-al-2025",
+        "page": 12,
+        "figure": 6,
+        "question": 120,
+        "original_group": "Portabilidade",
+        "original_subheading": "Atualizações e Patches"
+      },
+      "iso_2011_mapping": [
+        "portability"
+      ],
+      "iso_2023_mapping": [
+        "flexibility"
+      ],
+      "mapping_authority": "skill_interpretation_not_normative"
+    }
+  ]
+}

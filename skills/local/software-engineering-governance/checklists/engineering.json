@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "note": "Controles complementares, sem alegação de requisitos normativos ISO.",
+  "criteria": [
+    {
+      "id": "GOV-REQ",
+      "category": "requirements",
+      "title": "Aceite verificável e ambiguidades críticas resolvidas",
+      "description": "Aceite verificável e ambiguidades críticas resolvidas",
+      "severity": "medium",
+      "gate": "requirements",
+      "allow_not_applicable": false,
+      "origin": "skill_rule",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-ARCH",
+      "category": "architecture",
+      "title": "Compatibilidade arquitetural e contratos revisados",
+      "description": "Compatibilidade arquitetural e contratos revisados",
+      "severity": "medium",
+      "gate": "architecture",
+      "allow_not_applicable": true,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-CODE",
+      "category": "implementation",
+      "title": "Diff implementa o aceite e preserva escopo e contratos",
+      "description": "Diff implementa o aceite e preserva escopo e contratos",
+      "severity": "medium",
+      "gate": "implementation",
+      "allow_not_applicable": false,
+      "origin": "skill_rule",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-TEST",
+      "category": "tests",
+      "title": "Resultados observáveis dos testes/verificações afetados",
+      "description": "Resultados observáveis dos testes/verificações afetados",
+      "severity": "medium",
+      "gate": "tests",
+      "allow_not_applicable": false,
+      "origin": "skill_rule",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-SEC",
+      "category": "security",
+      "title": "Riscos e controles de segurança afetados revisados",
+      "description": "Riscos e controles de segurança afetados revisados",
+      "severity": "medium",
+      "gate": "security",
+      "allow_not_applicable": true,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-DOC",
+      "category": "documentation",
+      "title": "Documentação afetada sincronizada",
+      "description": "Documentação afetada sincronizada",
+      "severity": "medium",
+      "gate": "documentation",
+      "allow_not_applicable": true,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-DEL",
+      "category": "delivery",
+      "title": "Gates, achados, limitações e riscos revisados",
+      "description": "Gates, achados, limitações e riscos revisados",
+      "severity": "medium",
+      "gate": "delivery",
+      "allow_not_applicable": false,
+      "origin": "skill_rule",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-REG",
+      "category": "regression",
+      "title": "Regressões indiretas e reprodução do bug avaliadas",
+      "description": "Regressões indiretas e reprodução do bug avaliadas",
+      "severity": "medium",
+      "gate": "tests",
+      "allow_not_applicable": true,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-UI",
+      "category": "usability",
+      "title": "Interação real, responsividade e acessibilidade inspecionadas",
+      "description": "Interação real, responsividade e acessibilidade inspecionadas",
+      "severity": "medium",
+      "gate": "tests",
+      "allow_not_applicable": true,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-AUTH",
+      "category": "security",
+      "title": "Negativos de autorização por recurso, perfil e tenant",
+      "description": "Negativos de autorização por recurso, perfil e tenant",
+      "severity": "high",
+      "gate": "security",
+      "allow_not_applicable": false,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-DATA",
+      "category": "reliability",
+      "title": "Integridade transacional e recuperação demonstradas com dados isolados",
+      "description": "Integridade transacional e recuperação demonstradas com dados isolados",
+      "severity": "high",
+      "gate": "tests",
+      "allow_not_applicable": false,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-ADR",
+      "category": "architecture",
+      "title": "Decisão relevante e reversão registradas em ADR",
+      "description": "Decisão relevante e reversão registradas em ADR",
+      "severity": "medium",
+      "gate": "architecture",
+      "allow_not_applicable": false,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-SAFE",
+      "category": "safety",
+      "title": "Riscos de dano, restrição operacional e comportamento seguro avaliados",
+      "description": "Riscos de dano, restrição operacional e comportamento seguro avaliados",
+      "severity": "high",
+      "gate": "security",
+      "allow_not_applicable": true,
+      "origin": "skill_rule",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-PERF",
+      "category": "performance_efficiency",
+      "title": "Carga e orçamento aprovados confrontados com medição",
+      "description": "Carga e orçamento aprovados confrontados com medição",
+      "severity": "medium",
+      "gate": "tests",
+      "allow_not_applicable": true,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-COMP",
+      "category": "compatibility",
+      "title": "Consumidores e contratos compatíveis verificados",
+      "description": "Consumidores e contratos compatíveis verificados",
+      "severity": "medium",
+      "gate": "tests",
+      "allow_not_applicable": true,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    },
+    {
+      "id": "GOV-PORT",
+      "category": "portability",
+      "title": "Ambientes suportados e instalação verificados",
+      "description": "Ambientes suportados e instalação verificados",
+      "severity": "medium",
+      "gate": "tests",
+      "allow_not_applicable": true,
+      "origin": "engineering_practice",
+      "verification": {
+        "type": "test_or_review"
+      },
+      "evidence_required": true,
+      "status": "not_verified"
+    }
+  ]
+}

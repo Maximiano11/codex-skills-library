@@ -1,0 +1,3 @@
+interface:
+  display_name: "Code Reviewer"
+  short_description: "Revisão de defeitos e regressões verificáveis"

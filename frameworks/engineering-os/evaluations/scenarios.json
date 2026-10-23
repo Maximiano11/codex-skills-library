@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "kind": "model-input-fixtures",
+  "cases": [
+    {
+      "id": "css",
+      "request": "Corrija a margem do botão de 4px para 8px. Preserve o restante da interface.",
+      "change": {
+        "request": "Corrija a margem do botão de 4px para 8px. Preserve o restante da interface.",
+        "scope": "local",
+        "reversible": true,
+        "acceptance": [
+          "Resultado e restrições descritos no pedido, confirmados por inspeção e verificação apropriada."
+        ]
+      },
+      "files": {
+        "index.html": "<!doctype html><html lang=\"pt-BR\"><meta charset=\"utf-8\"><title>Botão</title><style>button{margin:4px;padding:12px;color:#fff;background:#192b40}</style><button>Salvar</button></html>\n",
+        "AGENTS.md": "# Fixture de avaliação isolado\nUse a stack existente e dados sintéticos. Python: python3 -B -m unittest discover -v.\nNão instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm análise/auditoria/plano, preserve arquivos; evidências de avaliação ficam fora do fixture.\n"
+      }
+    },
+    {
+      "id": "form",
+      "request": "Implemente um formulário local de nome: rótulo visível, envio sem recarregar, nome vazio mostra erro associado ao campo; nome preenchido mostra confirmação local. Não crie conta, backend ou persistência.",
+      "change": {
+        "request": "Implemente um formulário local de nome: rótulo visível, envio sem recarregar, nome vazio mostra erro associado ao campo; nome preenchido mostra confirmação local. Não crie conta, backend ou persistência.",
+        "scope": "module",
+        "reversible": true,
+        "acceptance": [
+          "Resultado e restrições descritos no pedido, confirmados por inspeção e verificação apropriada."
+        ]
+      },
+      "files": {
+        "index.html": "<!doctype html><html lang=\"pt-BR\"><meta charset=\"utf-8\"><title>Nome</title><style>body{font:18px system-ui;padding:32px}input,button{font:inherit}</style><main><h1>Seu nome</h1></main></html>\n",
+        "AGENTS.md": "# Fixture de avaliação isolado\nUse a stack existente e dados sintéticos. Python: python3 -B -m unittest discover -v.\nNão instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm análise/auditoria/plano, preserve arquivos; evidências de avaliação ficam fora do fixture.\n"
+      }
+    },
+    {
+      "id": "endpoint",
+      "request": "Crie GET /items retornando os itens da constante ITEMS em JSON, status 200 e Content-Type application/json. Preserve /health e 404 para rotas desconhecidas. Use a stack existente.",
+      "change": {
+        "request": "Crie GET /items retornando os itens da constante ITEMS em JSON, status 200 e Content-Type application/json. Preserve /health e 404 para rotas desconhecidas. Use a stack existente.",
+        "scope": "module",
+        "reversible": true,
+        "acceptance": [
+          "Resultado e restrições descritos no pedido, confirmados por inspeção e verificação apropriada."
+        ]
+      },
+      "files": {
+        "app.py": "from http.server import BaseHTTPRequestHandler\n\nITEMS = [{\"id\": 1, \"name\": \"demo\"}]\n\nclass Handler(BaseHTTPRequestHandler):\n    def do_GET(self):\n        if self.path == \"/health\":\n            self.send_response(200); self.end_headers(); self.wfile.write(b\"ok\")\n        else:\n            self.send_response(404); self.end_headers()\n\n    def log_message(self, *args):\n        pass\n",
+        "test_app.py": "import unittest\n\nclass Baseline(unittest.TestCase):\n    def test_import(self):\n        from app import Handler\n        self.assertTrue(callable(Handler))\n",
+        "AGENTS.md": "# Fixture de avaliação isolado\nUse a stack existente e dados sintéticos. Python: python3 -B -m unittest discover -v.\nNão instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm análise/auditoria/plano, preserve arquivos; evidências de avaliação ficam fora do fixture.\n"
+      }
+    },
+    {
+      "id": "refactor",
+      "request": "Refatore orders.total extraindo o cálculo para pricing.py, preservando a API orders.total, resultados em centavos e erros existentes. Não adicione dependências.",
+      "change": {
+        "request": "Refatore orders.total extraindo o cálculo para pricing.py, preservando a API orders.total, resultados em centavos e erros existentes. Não adicione dependências.",
+        "scope": "module",
+        "reversible": true,
+        "acceptance": [
+          "Resultado e restrições descritos no pedido, confirmados por inspeção e verificação apropriada."
+        ]
+      },
+      "files": {
+        "orders.py": "def total(items):\n    return sum(x[\"unit_cents\"] * x[\"quantity\"] for x in items)\n",
+        "checkout.py": "from orders import total\n\ndef checkout(items):\n    return {\"total_cents\": total(items)}\n",
+        "test_orders.py": "import unittest\nfrom checkout import checkout\n\nclass TotalTest(unittest.TestCase):\n    def test_total(self):\n        self.assertEqual(checkout([{\"unit_cents\":125,\"quantity\":2}]),{\"total_cents\":250})\n",
+        "AGENTS.md": "# Fixture de avaliação isolado\nUse a stack existente e dados sintéticos. Python: python3 -B -m unittest discover -v.\nNão instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm análise/auditoria/plano, preserve arquivos; evidências de avaliação ficam fora do fixture.\n"
+      }
+    },
+    {
+      "id": "scroll-drag",
+      "request": "Corrija o conflito entre scroll e drag: a área de texto deve permitir scroll normal no toque/roda, arrastar começa somente pelo handle e deve continuar funcionando. Preserve a reordenação por teclado.",
+      "change": {
+        "request": "Corrija o conflito entre scroll e drag: a área de texto deve permitir scroll normal no toque/roda, arrastar começa somente pelo handle e deve continuar funcionando. Preserve a reordenação por teclado.",
+        "scope": "module",
+        "reversible": true,
+        "traits": [
+          "ui"
+        ],
+        "acceptance": [
+          "Resultado e restrições descritos no pedido, confirmados por inspeção e verificação apropriada."
+        ]
+      },
+      "files": {
+        "index.html": "<!doctype html><html lang=\"pt-BR\"><meta charset=\"utf-8\"><title>Scroll e drag</title><style>body{font:18px system-ui;padding:20px}.list{height:180px;width:360px;overflow-y:auto;border:1px solid #444}.row{padding:20px;border-bottom:1px solid #aaa}.handle{touch-action:none;cursor:grab}button{font:inherit}</style><div class=\"list\" aria-label=\"Itens\"><div class=\"row\"><button class=\"handle\" aria-label=\"Mover item 1\">↕</button><span>Item 1 com texto para leitura</span></div><div class=\"row\"><button class=\"handle\" aria-label=\"Mover item 2\">↕</button><span>Item 2 com texto para leitura</span></div><div class=\"row\"><button class=\"handle\" aria-label=\"Mover item 3\">↕</button><span>Item 3 com texto para leitura</span></div><div class=\"row\"><button class=\"handle\" aria-label=\"Mover item 4\">↕</button><span>Item 4 com texto para leitura</span></div><div class=\"row\"><button class=\"handle\" aria-label=\"Mover item 5\">↕</button><span>Item 5 com texto para leitura</span></div><div class=\"row\"><button class=\"handle\" aria-label=\"Mover item 6\">↕</button><span>Item 6 com texto para leitura</span></div><div class=\"row\"><button class=\"handle\" aria-label=\"Mover item 7\">↕</button><span>Item 7 com texto para leitura</span></div><div class=\"row\"><button class=\"handle\" aria-label=\"Mover item 8\">↕</button><span>Item 8 com texto para leitura</span></div></div><script>\nconst list=document.querySelector('.list');let row=null;\nlist.addEventListener('pointerdown',e=>{e.preventDefault();row=e.target.closest('.row');if(row)list.setPointerCapture(e.pointerId)});\nlist.addEventListener('pointerup',e=>{const target=document.elementFromPoint(e.clientX,e.clientY)?.closest('.row');if(row&&target&&row!==target)list.insertBefore(row,target);row=null});\nlist.addEventListener('keydown',e=>{const row=e.target.closest('.row');if(!row)return;if(e.key==='ArrowDown'&&row.nextElementSibling){e.preventDefault();list.insertBefore(row.nextElementSibling,row);row.querySelector('button').focus()}if(e.key==='ArrowUp'&&row.previousElementSibling){e.preventDefault();list.insertBefore(row,row.previousElementSibling);row.querySelector('button').focus()}});\n</script></html>\n",
+        "AGENTS.md": "# Fixture de avaliação isolado\nUse a stack existente e dados sintéticos. Python: python3 -B -m unittest discover -v.\nNão instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm análise/auditoria/plano, preserve arquivos; evidências de avaliação ficam fora do fixture.\n"
+      }
+    },
+    {
+      "id": "schema",
+      "request": "Implemente migrate(conn) adicionando timezone TEXT nullable à tabela users, preservando linhas existentes e permitindo repetir a migration. Teste somente SQLite em memória; não aplique a dados reais.",
+      "change": {
+        "request": "Implemente migrate(conn) adicionando timezone TEXT nullable à tabela users, preservando linhas existentes e permitindo repetir a migration. Teste somente SQLite em memória; não aplique a dados reais.",
+        "scope": "module",
+        "reversible": true,
+        "traits": [
+          "migration",
+          "database"
+        ],
+        "acceptance": [
+          "Resultado e restrições descritos no pedido, confirmados por inspeção e verificação apropriada."
+        ]
+      },
+      "files": {
+        "migration.py": "def migrate(conn):\n    pass\n",
+        "test_migration.py": "import sqlite3,unittest\nfrom migration import migrate\n\nclass MigrationTest(unittest.TestCase):\n    def test_existing(self):\n        conn=sqlite3.connect(\":memory:\")\n        conn.execute(\"CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT NOT NULL)\")\n        conn.execute(\"INSERT INTO users VALUES (1, 'demo')\")\n        conn.commit()\n        migrate(conn)\n        self.assertEqual(conn.execute(\"SELECT id,name FROM users\").fetchall(),[(1,\"demo\")])\n        conn.close()\n",
+        "AGENTS.md": "# Fixture de avaliação isolado\nUse a stack existente e dados sintéticos. Python: python3 -B -m unittest discover -v.\nNão instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm análise/auditoria/plano, preserve arquivos; evidências de avaliação ficam fora do fixture.\n"
+      }
+    },
+    {
+      "id": "auth-audit",
+      "request": "Audite can_read para autenticação/autorização e isolamento entre organizações usando somente dados sintéticos. Relate achados com impacto e evidência; não aplique correções.",
+      "change": {
+        "request": "Audite can_read para autenticação/autorização e isolamento entre organizações usando somente dados sintéticos. Relate achados com impacto e evidência; não aplique correções.",
+        "mode": "audit",
+        "traits": [
+          "auth",
+          "sensitive-data"
+        ],
+        "acceptance": [
+          "Resultado e restrições descritos no pedido, confirmados por inspeção e verificação apropriada."
+        ]
+      },
+      "files": {
+        "auth.py": "def can_read(user, record):\n    return user[\"role\"] == \"admin\" or record[\"owner_id\"] == user[\"id\"]\n",
+        "CONTRACT.md": "Usuários só podem ler registros de sua própria organização; dentro dela, admin lê qualquer registro e membro lê o próprio. user pode ser None para sessão não autenticada; nesse caso acesso deve ser negado.\n",
+        "AGENTS.md": "# Fixture de avaliação isolado\nUse a stack existente e dados sintéticos. Python: python3 -B -m unittest discover -v.\nNão instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm análise/auditoria/plano, preserve arquivos; evidências de avaliação ficam fora do fixture.\n"
+      }
+    },
+    {
+      "id": "release",
+      "request": "Prepare a prontidão de produção sem publicar nem alterar código. Execute verificações locais seguras disponíveis e identifique os gates pendentes.",
+      "change": {
+        "request": "Prepare a prontidão de produção sem publicar nem alterar código. Execute verificações locais seguras disponíveis e identifique os gates pendentes.",
+        "mode": "plan",
+        "traits": [
+          "production"
+        ],
+        "acceptance": [
+          "Resultado e restrições descritos no pedido, confirmados por inspeção e verificação apropriada."
+        ]
+      },
+      "files": {
+        "app.py": "def health():\n    return \"ok\"\n",
+        "test_app.py": "import unittest\nfrom app import health\n\nclass Health(unittest.TestCase):\n    def test_health(self):\n        self.assertEqual(health(),\"ok\")\n",
+        "RELEASE.md": "Release requer teste unitário local e teste de integração contra o ambiente de homologação. O ambiente de homologação está indisponível neste fixture. Deploy e alteração de pipeline não estão autorizados.\n",
+        "AGENTS.md": "# Fixture de avaliação isolado\nUse a stack existente e dados sintéticos. Python: python3 -B -m unittest discover -v.\nNão instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm análise/auditoria/plano, preserve arquivos; evidências de avaliação ficam fora do fixture.\n"
+      }
+    },
+    {
+      "id": "ambiguous",
+      "request": "Mude o desconto padrão para ficar melhor.",
+      "change": {
+        "request": "Mude o desconto padrão para ficar melhor.",
+        "scope": "local",
+        "reversible": true,
+        "ambiguities": [
+          "Qual percentual ou resultado de negócio é esperado?"
+        ]
+      },
+      "files": {
+        "discounts.py": "DEFAULT_PERCENT = 5\n\ndef price(cents):\n    return cents * (100 - DEFAULT_PERCENT) // 100\n",
+        "AGENTS.md": "# Fixture de avaliação isolado\nUse a stack existente e dados sintéticos. Python: python3 -B -m unittest discover -v.\nNão instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm análise/auditoria/plano, preserve arquivos; evidências de avaliação ficam fora do fixture.\n"
+      }
+    },
+    {
+      "id": "analysis-only",
+      "request": "Analise por que o cache pode retornar dados de outra organização. Não implemente nem altere arquivos.",
+      "change": {
+        "request": "Analise por que o cache pode retornar dados de outra organização. Não implemente nem altere arquivos.",
+        "mode": "analyze",
+        "traits": [
+          "sensitive-data"
+        ],
+        "acceptance": [
+          "Resultado e restrições descritos no pedido, confirmados por inspeção e verificação apropriada."
+        ]
+      },
+      "files": {
+        "reports.py": "CACHE = {}\n\ndef report(tenant, report_id):\n    if report_id not in CACHE:\n        CACHE[report_id] = {\"tenant\":tenant,\"report_id\":report_id}\n    return dict(CACHE[report_id])\n",
+        "AGENTS.md": "# Fixture de avaliação isolado\nUse a stack existente e dados sintéticos. Python: python3 -B -m unittest discover -v.\nNão instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm análise/auditoria/plano, preserve arquivos; evidências de avaliação ficam fora do fixture.\n"
+      }
+    }
+  ]
+}

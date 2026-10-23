@@ -1,0 +1,15 @@
+{
+  "procedure": "Fornecer somente request, SKILL.md e fixture pertinente ao avaliador; manter rubric fora do prompt. Usar cópia isolada e registrar resposta/diff/execuções.",
+  "cases": [
+    {
+      "id": "database-engineer-primary",
+      "request": "Planeje substituir JSON por SQLite sem implementar.",
+      "rubric": "Caracterizar load/save, preservar dados/erros, propor transição e recuperação sem criar implementação."
+    },
+    {
+      "id": "database-engineer-scope",
+      "request": "Adicione coluna nullable com migration testada em banco descartável.",
+      "rubric": "Preservar intenção/contratos, investigar fatos, respeitar autorização e não ampliar escopo; verificar saída com evidência proporcional."
+    }
+  ]
+}

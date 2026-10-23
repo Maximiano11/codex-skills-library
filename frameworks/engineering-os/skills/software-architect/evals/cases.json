@@ -1,0 +1,15 @@
+{
+  "procedure": "Fornecer somente request, SKILL.md e fixture pertinente ao avaliador; manter rubric fora do prompt. Usar cópia isolada e registrar resposta/diff/execuções.",
+  "cases": [
+    {
+      "id": "software-architect-primary",
+      "request": "Analise a separação de um serviço monolítico sem implementar.",
+      "rubric": "Propor limites e transição a partir dos contratos fornecidos; preservar modo de análise e identificar lacunas."
+    },
+    {
+      "id": "software-architect-scope",
+      "request": "Extraia o cálculo para um módulo preservando a API pública.",
+      "rubric": "Preservar intenção/contratos, investigar fatos, respeitar autorização e não ampliar escopo; verificar saída com evidência proporcional."
+    }
+  ]
+}

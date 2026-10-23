@@ -1,0 +1,1 @@
+Corrija o conflito entre scroll e drag: a área de texto deve permitir scroll normal no toque/roda, arrastar começa somente pelo handle e deve continuar funcionando. Preserve a reordenação por teclado.

@@ -1,0 +1,33 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Nome</title><style>body{font:18px system-ui;padding:32px}input,button{font:inherit}</style><main><h1>Seu nome</h1>
+<form novalidate>
+<label for="name">Nome</label>
+<input id="name" name="name" type="text" required aria-describedby="name-error">
+<p id="name-error" role="alert"></p>
+<button type="submit">Enviar</button>
+</form>
+<p id="confirmation" role="status"></p>
+</main><script>
+const form = document.querySelector('form');
+const nameInput = document.querySelector('#name');
+const error = document.querySelector('#name-error');
+const confirmation = document.querySelector('#confirmation');
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  const name = nameInput.value.trim();
+  confirmation.textContent = '';
+  if (!name) {
+    nameInput.setAttribute('aria-invalid', 'true');
+    error.textContent = 'Informe seu nome.';
+    nameInput.focus();
+    return;
+  }
+  nameInput.removeAttribute('aria-invalid');
+  error.textContent = '';
+  confirmation.textContent = 'Nome recebido: ' + name + '.';
+});
+nameInput.addEventListener('input', () => {
+  nameInput.removeAttribute('aria-invalid');
+  error.textContent = '';
+  confirmation.textContent = '';
+});
+</script></html>

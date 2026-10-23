@@ -1,0 +1,3 @@
+interface:
+  display_name: "Release Manager"
+  short_description: "Prontidão de release e recuperação verificável"

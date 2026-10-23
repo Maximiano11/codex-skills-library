@@ -1,0 +1,11 @@
+exit: 0
+test_import (test_app.Baseline.test_import) ... ok
+test_health_preserved (test_app.EndpointTest.test_health_preserved) ... ok
+test_items_contract (test_app.EndpointTest.test_items_contract) ... ok
+test_items_uses_constant (test_app.EndpointTest.test_items_uses_constant) ... ok
+test_unknown_route (test_app.EndpointTest.test_unknown_route) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.525s
+
+OK

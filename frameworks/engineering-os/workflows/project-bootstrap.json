@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "project-bootstrap",
+  "activation": "Início de novo projeto com escopo e stack definidos",
+  "skills": [
+    "prompt-engineer",
+    "software-architect",
+    "implementation-standards",
+    "quality-engineer",
+    "technical-documentation"
+  ],
+  "steps": [
+    {
+      "id": "clarify",
+      "depends_on": [],
+      "action": "Definir entrega mínima, restrições e decisões críticas; não escolher stack contra o pedido"
+    },
+    {
+      "id": "design",
+      "depends_on": [
+        "clarify"
+      ],
+      "action": "Selecionar estrutura mínima e contratos conforme necessidades reais"
+    },
+    {
+      "id": "initialize",
+      "depends_on": [
+        "design"
+      ],
+      "action": "Criar apenas projeto novo autorizado; preservar arquivos preexistentes e segredos"
+    },
+    {
+      "id": "vertical",
+      "depends_on": [
+        "initialize"
+      ],
+      "action": "Entregar um fluxo mínimo executável com validação real e erros relevantes"
+    },
+    {
+      "id": "document",
+      "depends_on": [
+        "vertical"
+      ],
+      "action": "Documentar comandos observados e próximos limites; não prometer prontidão sem evidência"
+    }
+  ],
+  "approval": "Fluxo mínimo utilizável, verificações executadas e documentação reprodutível.",
+  "stop": "Colisão com conteúdo existente, produto indefinido ou dependência essencial indisponível.",
+  "outputs": [
+    "Resumo proporcional da decisão/entrega",
+    "Evidências e estado de validação no escopo",
+    "Pendências e limitações relevantes"
+  ],
+  "mode_rule": "Em analyze, explain, audit ou plan, executar somente inspeção e a entrega pedida. Etapas de implementação não ficam autorizadas por selecionar este workflow."
+}

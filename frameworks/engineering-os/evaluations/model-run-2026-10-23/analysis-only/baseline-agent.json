@@ -1,0 +1,10 @@
+{
+  "reports.py": {
+    "sha256": "a822aeec00cf81c91376e53febd19743a68bc4636eef15c52dfbbc0e6925cd96",
+    "text": "CACHE = {}\n\ndef report(tenant, report_id):\n    if report_id not in CACHE:\n        CACHE[report_id] = {\"tenant\":tenant,\"report_id\":report_id}\n    return dict(CACHE[report_id])\n"
+  },
+  "AGENTS.md": {
+    "sha256": "c4625771d05accd295fc23ba1133cf7f86039b6dc13f6afe0001182b3c775409",
+    "text": "# Fixture de avalia\u00e7\u00e3o isolado\nUse a stack existente e dados sint\u00e9ticos. Python: python3 -B -m unittest discover -v.\nN\u00e3o instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm an\u00e1lise/auditoria/plano, preserve arquivos; evid\u00eancias de avalia\u00e7\u00e3o ficam fora do fixture.\n"
+  }
+}

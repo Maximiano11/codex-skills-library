@@ -1,0 +1,12 @@
+exit: 0
+test_empty (test_orders.TotalTest.test_empty) ... ok
+test_existing_errors (test_orders.TotalTest.test_existing_errors) ... ok
+test_generator (test_orders.TotalTest.test_generator) ... ok
+test_input_unchanged (test_orders.TotalTest.test_input_unchanged) ... ok
+test_multiple_integer_cents_and_zero (test_orders.TotalTest.test_multiple_integer_cents_and_zero) ... ok
+test_total (test_orders.TotalTest.test_total) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

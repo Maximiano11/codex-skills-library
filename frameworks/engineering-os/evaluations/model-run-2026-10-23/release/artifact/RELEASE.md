@@ -1,0 +1,1 @@
+Release requer teste unitário local e teste de integração contra o ambiente de homologação. O ambiente de homologação está indisponível neste fixture. Deploy e alteração de pipeline não estão autorizados.

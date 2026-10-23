@@ -1,0 +1,78 @@
+[
+  {
+    "id": "css",
+    "scope_verified": true,
+    "changed_files": [
+      "index.html"
+    ],
+    "response_review": "Reviewed against original request; pending touch and initial release-risk discrepancy retained in final report."
+  },
+  {
+    "id": "form",
+    "scope_verified": true,
+    "changed_files": [
+      "index.html"
+    ],
+    "response_review": "Reviewed against original request; pending touch and initial release-risk discrepancy retained in final report."
+  },
+  {
+    "id": "endpoint",
+    "scope_verified": true,
+    "changed_files": [
+      "app.py",
+      "test_app.py"
+    ],
+    "response_review": "Reviewed against original request; pending touch and initial release-risk discrepancy retained in final report."
+  },
+  {
+    "id": "refactor",
+    "scope_verified": true,
+    "changed_files": [
+      "orders.py",
+      "pricing.py",
+      "test_orders.py"
+    ],
+    "response_review": "Reviewed against original request; pending touch and initial release-risk discrepancy retained in final report."
+  },
+  {
+    "id": "scroll-drag",
+    "scope_verified": true,
+    "changed_files": [
+      "index.html"
+    ],
+    "response_review": "Reviewed against original request; pending touch and initial release-risk discrepancy retained in final report."
+  },
+  {
+    "id": "schema",
+    "scope_verified": true,
+    "changed_files": [
+      "migration.py",
+      "test_migration.py"
+    ],
+    "response_review": "Reviewed against original request; pending touch and initial release-risk discrepancy retained in final report."
+  },
+  {
+    "id": "auth-audit",
+    "scope_verified": true,
+    "changed_files": [],
+    "response_review": "Reviewed against original request; pending touch and initial release-risk discrepancy retained in final report."
+  },
+  {
+    "id": "release",
+    "scope_verified": true,
+    "changed_files": [],
+    "response_review": "Reviewed against original request; pending touch and initial release-risk discrepancy retained in final report."
+  },
+  {
+    "id": "ambiguous",
+    "scope_verified": true,
+    "changed_files": [],
+    "response_review": "Reviewed against original request; pending touch and initial release-risk discrepancy retained in final report."
+  },
+  {
+    "id": "analysis-only",
+    "scope_verified": true,
+    "changed_files": [],
+    "response_review": "Reviewed against original request; pending touch and initial release-risk discrepancy retained in final report."
+  }
+]

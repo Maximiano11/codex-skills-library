@@ -1,0 +1,6 @@
+interface:
+  display_name: "Production Readiness Auditor"
+  short_description: "Auditoria de qualidade e gate verificável de release"
+  default_prompt: "Use $production-readiness-auditor para auditar as mudanças e verificar a prontidão para produção."
+policy:
+  allow_implicit_invocation: true

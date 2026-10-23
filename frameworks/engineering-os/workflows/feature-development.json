@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "feature-development",
+  "activation": "Pedido de funcionalidade autorizada",
+  "skills": [
+    "prompt-engineer",
+    "implementation-standards",
+    "quality-engineer",
+    "code-reviewer"
+  ],
+  "steps": [
+    {
+      "id": "requirements",
+      "depends_on": [],
+      "action": "Relacionar comportamento solicitado, contratos, ambiguidades e aceite; esclarecer decisões críticas"
+    },
+    {
+      "id": "impact",
+      "depends_on": [
+        "requirements"
+      ],
+      "action": "Investigar módulos, consumidores e regras existentes; selecionar especialidades pelo impacto"
+    },
+    {
+      "id": "implement",
+      "depends_on": [
+        "impact"
+      ],
+      "action": "Implementar apenas o escopo autorizado preservando convenções e compatibilidade"
+    },
+    {
+      "id": "validate",
+      "depends_on": [
+        "implement"
+      ],
+      "action": "Executar cenários positivos, negativos e regressões afetadas e revisar o diff"
+    },
+    {
+      "id": "deliver",
+      "depends_on": [
+        "validate"
+      ],
+      "action": "Conferir aceite, evidências e pendências; atualizar documentação afetada"
+    }
+  ],
+  "approval": "Aceite suficientemente definido; verificações obrigatórias aprovadas no escopo.",
+  "stop": "Decisão crítica em aberto, ausência de autorização para ação sensível ou gate obrigatório com falha.",
+  "outputs": [
+    "Resumo proporcional da decisão/entrega",
+    "Evidências e estado de validação no escopo",
+    "Pendências e limitações relevantes"
+  ],
+  "mode_rule": "Em analyze, explain, audit ou plan, executar somente inspeção e a entrega pedida. Etapas de implementação não ficam autorizadas por selecionar este workflow."
+}

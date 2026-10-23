@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "bug-investigation",
+  "activation": "Comportamento defeituoso ou regressão relatada",
+  "skills": [
+    "prompt-engineer",
+    "implementation-standards",
+    "quality-engineer",
+    "code-reviewer"
+  ],
+  "steps": [
+    {
+      "id": "reproduce",
+      "depends_on": [],
+      "action": "Obter entrada, esperado e observado; reproduzir com dados isolados"
+    },
+    {
+      "id": "isolate",
+      "depends_on": [
+        "reproduce"
+      ],
+      "action": "Rastrear a causa e os contratos afetados; distinguir causa demonstrada de hipótese"
+    },
+    {
+      "id": "regression",
+      "depends_on": [
+        "isolate"
+      ],
+      "action": "Criar reprodução automatizada que detecte o defeito quando viável"
+    },
+    {
+      "id": "fix",
+      "depends_on": [
+        "regression"
+      ],
+      "action": "Se correção estiver autorizada, aplicar o menor ajuste suficiente sem refatorações adjacentes"
+    },
+    {
+      "id": "validate",
+      "depends_on": [
+        "fix"
+      ],
+      "action": "Confirmar correção e regressões relacionadas; documentar limites da reprodução"
+    }
+  ],
+  "approval": "Causa sustentada por evidência, regressão passa após correção, contratos afetados preservados.",
+  "stop": "Sem reprodução suficiente para afirmar correção; decisão de regra necessária; risco crítico não resolvido.",
+  "outputs": [
+    "Resumo proporcional da decisão/entrega",
+    "Evidências e estado de validação no escopo",
+    "Pendências e limitações relevantes"
+  ],
+  "mode_rule": "Em analyze, explain, audit ou plan, executar somente inspeção e a entrega pedida. Etapas de implementação não ficam autorizadas por selecionar este workflow."
+}

@@ -1,0 +1,1 @@
+Audite can_read para autenticação/autorização e isolamento entre organizações usando somente dados sintéticos. Relate achados com impacto e evidência; não aplique correções.

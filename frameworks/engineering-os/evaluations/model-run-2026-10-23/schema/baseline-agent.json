@@ -1,0 +1,14 @@
+{
+  "test_migration.py": {
+    "sha256": "c02dec09bdefd0d332f1385bd2ec9ed1eec5f223d2f6dd90de81c2a704e43552",
+    "text": "import sqlite3,unittest\nfrom migration import migrate\n\nclass MigrationTest(unittest.TestCase):\n    def test_existing(self):\n        conn=sqlite3.connect(\":memory:\")\n        conn.execute(\"CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT NOT NULL)\")\n        conn.execute(\"INSERT INTO users VALUES (1, 'demo')\")\n        conn.commit()\n        migrate(conn)\n        self.assertEqual(conn.execute(\"SELECT id,name FROM users\").fetchall(),[(1,\"demo\")])\n        conn.close()\n"
+  },
+  "AGENTS.md": {
+    "sha256": "c4625771d05accd295fc23ba1133cf7f86039b6dc13f6afe0001182b3c775409",
+    "text": "# Fixture de avalia\u00e7\u00e3o isolado\nUse a stack existente e dados sint\u00e9ticos. Python: python3 -B -m unittest discover -v.\nN\u00e3o instalar pacotes, publicar, usar dados reais ou modificar arquivos fora deste fixture.\nEm an\u00e1lise/auditoria/plano, preserve arquivos; evid\u00eancias de avalia\u00e7\u00e3o ficam fora do fixture.\n"
+  },
+  "migration.py": {
+    "sha256": "4350d8913290381123b3312d9fc4b8ca0bc4e94d5583c584d45207fa5e18babb",
+    "text": "def migrate(conn):\n    pass\n"
+  }
+}

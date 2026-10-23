@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "security-review",
+  "activation": "Auditoria ou revisão de superfícies de segurança",
+  "skills": [
+    "prompt-engineer",
+    "security-auditor",
+    "quality-engineer",
+    "code-reviewer"
+  ],
+  "steps": [
+    {
+      "id": "scope",
+      "depends_on": [],
+      "action": "Definir ativos, fronteiras de confiança, perfis e alvos permitidos"
+    },
+    {
+      "id": "inspect",
+      "depends_on": [
+        "scope"
+      ],
+      "action": "Traçar entradas não confiáveis até autorização, persistência e saída"
+    },
+    {
+      "id": "demonstrate",
+      "depends_on": [
+        "inspect"
+      ],
+      "action": "Reproduzir apenas em ambiente isolado permitido; delimitar impacto e severidade"
+    },
+    {
+      "id": "report",
+      "depends_on": [
+        "demonstrate"
+      ],
+      "action": "Relatar achados com arquivo, entrada, consequência e correção proposta; não corrigir sem autorização"
+    },
+    {
+      "id": "verify",
+      "depends_on": [
+        "report"
+      ],
+      "action": "Validar correções somente se solicitadas e registrar lacunas e riscos residuais"
+    }
+  ],
+  "approval": "Achados rastreáveis, alcance declarado, nenhum risco crítico apresentado como aprovado.",
+  "stop": "Alvo real não autorizado, segredos expostos, exploração destrutiva ou evidência insuficiente.",
+  "outputs": [
+    "Resumo proporcional da decisão/entrega",
+    "Evidências e estado de validação no escopo",
+    "Pendências e limitações relevantes"
+  ],
+  "mode_rule": "Em analyze, explain, audit ou plan, executar somente inspeção e a entrega pedida. Etapas de implementação não ficam autorizadas por selecionar este workflow."
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "UI & UX Visual Auditor"
+  short_description: "Validação visual, usabilidade e acessibilidade"
+  default_prompt: "Use $ui-ux-visual-auditor para validar a interface e os fluxos deste sistema com evidências reais."
+policy:
+  allow_implicit_invocation: true

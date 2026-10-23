@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "refactoring",
+  "activation": "Reestruturação preservando comportamento observável",
+  "skills": [
+    "prompt-engineer",
+    "implementation-standards",
+    "quality-engineer",
+    "code-reviewer"
+  ],
+  "steps": [
+    {
+      "id": "characterize",
+      "depends_on": [],
+      "action": "Registrar contratos e comportamento atual, inclusive erros e efeitos colaterais"
+    },
+    {
+      "id": "bound",
+      "depends_on": [
+        "characterize"
+      ],
+      "action": "Delimitar módulo e consumidores; não introduzir requisitos de produto"
+    },
+    {
+      "id": "transform",
+      "depends_on": [
+        "bound"
+      ],
+      "action": "Refatorar em passos pequenos mantendo APIs e convenções"
+    },
+    {
+      "id": "compare",
+      "depends_on": [
+        "transform"
+      ],
+      "action": "Executar caracterização e regressões; comparar resultados antes/depois"
+    },
+    {
+      "id": "review",
+      "depends_on": [
+        "compare"
+      ],
+      "action": "Revisar diff por mudanças semânticas e dependências novas"
+    }
+  ],
+  "approval": "Paridade observável e verificações afetadas aprovadas; mudanças semânticas explícitas.",
+  "stop": "Comportamento pretendido ambíguo ou contrato quebrado fora do pedido.",
+  "outputs": [
+    "Resumo proporcional da decisão/entrega",
+    "Evidências e estado de validação no escopo",
+    "Pendências e limitações relevantes"
+  ],
+  "mode_rule": "Em analyze, explain, audit ou plan, executar somente inspeção e a entrega pedida. Etapas de implementação não ficam autorizadas por selecionar este workflow."
+}

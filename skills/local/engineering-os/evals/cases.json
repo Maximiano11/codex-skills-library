@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {
+      "request": "Corrija CSS de um botão preservando o fluxo.",
+      "rubric": "Selecionar UX/implementação/validação afetadas, sem banco, release ou arquitetura desnecessários."
+    },
+    {
+      "request": "Audite autenticação sem aplicar correções.",
+      "rubric": "Risco alto, somente auditoria, reprodução segura e arquivos preservados."
+    }
+  ]
+}

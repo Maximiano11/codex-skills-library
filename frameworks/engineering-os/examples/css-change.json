@@ -1,0 +1,8 @@
+{
+  "request": "Corrija o espaçamento CSS do botão sem alterar o fluxo.",
+  "scope": "local",
+  "reversible": true,
+  "acceptance": [
+    "Somente o espaçamento solicitado é alterado; aparência conferida no navegador."
+  ]
+}

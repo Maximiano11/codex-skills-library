@@ -1,0 +1,7 @@
+exit: 0
+test_health (test_app.Health.test_health) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK

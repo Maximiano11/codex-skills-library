@@ -1,0 +1,1 @@
+Implemente migrate(conn) adicionando timezone TEXT nullable à tabela users, preservando linhas existentes e permitindo repetir a migration. Teste somente SQLite em memória; não aplique a dados reais.

@@ -1,0 +1,1 @@
+Analise por que o cache pode retornar dados de outra organização. Não implemente nem altere arquivos.

@@ -1,0 +1,40 @@
+Command: python3 -B -m unittest discover -v
+Fixture: /var/folders/sf/qwt8dpfs63sb0qb5gpbjt3nc0000gn/T/engineering-os-model-evals-9m1e14vm/endpoint
+Exit code: 1
+
+test_health_preserved (test_app.EndpointTest.test_health_preserved) ... ok
+test_items_contract (test_app.EndpointTest.test_items_contract) ... FAIL
+test_items_uses_constant (test_app.EndpointTest.test_items_uses_constant) ... ERROR
+test_unknown_route (test_app.EndpointTest.test_unknown_route) ... ok
+
+======================================================================
+ERROR: test_items_uses_constant (test_app.EndpointTest.test_items_uses_constant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/sf/qwt8dpfs63sb0qb5gpbjt3nc0000gn/T/engineering-os-model-evals-9m1e14vm/endpoint/test_app.py", line 39, in test_items_uses_constant
+    self.assertEqual(json.loads(self.request("/items")[2]), ITEMS)
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+======================================================================
+FAIL: test_items_contract (test_app.EndpointTest.test_items_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/sf/qwt8dpfs63sb0qb5gpbjt3nc0000gn/T/engineering-os-model-evals-9m1e14vm/endpoint/test_app.py", line 32, in test_items_contract
+    self.assertEqual(status, 200)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 404 != 200
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.512s
+
+FAILED (failures=1, errors=1)
+

@@ -1,0 +1,1 @@
+Prepare a prontidão de produção sem publicar nem alterar código. Execute verificações locais seguras disponíveis e identifique os gates pendentes.

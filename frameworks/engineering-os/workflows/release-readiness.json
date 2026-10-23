@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "release-readiness",
+  "activation": "Preparação para produção; não implica publicar",
+  "skills": [
+    "prompt-engineer",
+    "release-manager",
+    "quality-engineer",
+    "security-auditor",
+    "code-reviewer",
+    "technical-documentation"
+  ],
+  "steps": [
+    {
+      "id": "freeze",
+      "depends_on": [],
+      "action": "Identificar revisão/conteúdo, destino pretendido e critérios de release existentes"
+    },
+    {
+      "id": "verify",
+      "depends_on": [
+        "freeze"
+      ],
+      "action": "Executar build, contratos, segurança e regressões obrigatórias na revisão candidata"
+    },
+    {
+      "id": "recovery",
+      "depends_on": [
+        "verify"
+      ],
+      "action": "Validar procedimento de migração, backup, monitoramento e rollback pertinente"
+    },
+    {
+      "id": "gate",
+      "depends_on": [
+        "recovery"
+      ],
+      "action": "Conferir evidência atual sem skips obrigatórios e riscos críticos abertos"
+    },
+    {
+      "id": "handoff",
+      "depends_on": [
+        "gate"
+      ],
+      "action": "Entregar decisão e plano operacional; publicar somente com autorização específica"
+    }
+  ],
+  "approval": "Critérios de release comprovados para a revisão candidata; recuperação e destino definidos.",
+  "stop": "P0/P1 aberto, teste obrigatório com falha/pendente, revisão divergente ou falta de autorização para publicar.",
+  "outputs": [
+    "Resumo proporcional da decisão/entrega",
+    "Evidências e estado de validação no escopo",
+    "Pendências e limitações relevantes"
+  ],
+  "mode_rule": "Em analyze, explain, audit ou plan, executar somente inspeção e a entrega pedida. Etapas de implementação não ficam autorizadas por selecionar este workflow."
+}

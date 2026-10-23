@@ -1,0 +1,28 @@
+import unittest
+from checkout import checkout
+from orders import total
+
+class TotalTest(unittest.TestCase):
+    def test_total(self):
+        self.assertEqual(checkout([{"unit_cents":125,"quantity":2}]),{"total_cents":250})
+
+    def test_empty(self):
+        self.assertEqual(total([]), 0)
+
+    def test_multiple_integer_cents_and_zero(self):
+        self.assertEqual(total([{"unit_cents": 125, "quantity": 3}, {"unit_cents": 99, "quantity": 2}, {"unit_cents": 700, "quantity": 0}]), 573)
+
+    def test_generator(self):
+        self.assertEqual(total({"unit_cents": 125, "quantity": x} for x in [1, 2]), 375)
+
+    def test_input_unchanged(self):
+        items = [{"unit_cents": 125, "quantity": 2}]
+        total(items)
+        self.assertEqual(items, [{"unit_cents": 125, "quantity": 2}])
+
+    def test_existing_errors(self):
+        for value, error, message in [(None, TypeError, "'NoneType' object is not iterable"), ([{}], KeyError, "'unit_cents'"), ([{"unit_cents": 1}], KeyError, "'quantity'"), ([{"unit_cents": None,"quantity": 2}], TypeError, "unsupported operand type(s) for *: 'NoneType' and 'int'")]:
+            with self.subTest(value=value):
+                with self.assertRaises(error) as caught:
+                    total(value)
+                self.assertEqual(str(caught.exception), message)

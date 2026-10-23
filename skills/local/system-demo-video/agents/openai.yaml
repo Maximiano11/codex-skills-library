@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vídeos cinematográficos de sistemas"
+  short_description: "Motion design de produto com interfaces reais"
+  default_prompt: "Use $system-demo-video para criar um vídeo cinematográfico deste sistema com componentes reais animados, seguindo a referência aprovada do Atria v3."

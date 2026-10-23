@@ -1,0 +1,1 @@
+Corrija a margem do botão de 4px para 8px. Preserve o restante da interface.

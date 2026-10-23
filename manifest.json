@@ -1,0 +1,1473 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-23",
+  "repository_visibility": "public",
+  "skills": [
+    {
+      "name": "brandkit",
+      "description": "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, premium mockups, art-directed imagery, and flexible grid layouts.",
+      "path": "skills/local/brandkit",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/brandkit",
+        "~/Documents/skills codex/.agents/skills/brandkit"
+      ],
+      "sha256": "a63d6f5d06c905dd5e517e158bc2408e96a6567887b6838151174e0aa690466e",
+      "files": 2,
+      "bytes": 20122,
+      "executable_files": [],
+      "source_snapshot_sha256": "fbb2331fdf58e106787adb9de4bf1690d7d0e6545e7ca7d8df5a45a8360d4562",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "code-reviewer",
+      "description": "Revisar alterações procurando defeitos verificáveis, regressões e riscos em contratos e efeitos. Revisão é somente leitura salvo correção explicitamente autorizada; evitar comentários de estilo sem impacto.",
+      "path": "skills/local/code-reviewer",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/code-reviewer"
+      ],
+      "sha256": "8195abc08a279f044e2672ce623c11b1afd53473a0c00974b29aa189ae88a140",
+      "files": 4,
+      "bytes": 4380,
+      "executable_files": [],
+      "source_snapshot_sha256": "0c983f2a1dd49eb173070eaced891d3c41b100006d7b5d1df68606648874af5d",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "database-engineer",
+      "description": "Analisar ou alterar modelo de dados, consultas, integridade, transações e migrations com recuperação. Usar quando persistência for afetada; não executar migrações reais por selecionar a skill.",
+      "path": "skills/local/database-engineer",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/database-engineer"
+      ],
+      "sha256": "a99c4b2dc15d780dabe805b3f9789d9dbe0b91df1e7e7b354bacb49ab6624bbf",
+      "files": 4,
+      "bytes": 4534,
+      "executable_files": [],
+      "source_snapshot_sha256": "7902ce8bc01a23dce5627dbe85e6a17cad11cd166f1aee476c43b09909aeed3b",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "design-taste-frontend",
+      "description": "tasteskill v2, the anti-slop frontend skill. Art direction for websites, distilled from a study of 247 curated gallery sites (One Page Love, Awwwards Sites of the Day). Deals researched directions (idea, composition, type, palette, photographs, section blueprints) from a library, enforces a strict no-slop house style with a real-browser inspector, and runs a look-and-fix loop on screenshots. Use this whenever you build, design, redesign, restyle, polish or review a landing page, marketing site, portfolio, product page, one-pager, hero or any public-facing web page, in any stack (HTML/CSS, React, Next.js, Vue, Svelte, Astro, Tailwind) — also when the user says a page looks generic, templated, \"AI-made\", sloppy, or asks to make it look designed, premium, award-level or less like every other site. Not for dashboards or app screens.",
+      "path": "skills/local/design-taste-frontend",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/design-taste-frontend",
+        "~/Documents/skills codex/.agents/skills/design-taste-frontend"
+      ],
+      "sha256": "2ac83ace786451f4744d99523a9528aab82e2090c61e67f98725dcd5a914b129",
+      "files": 30,
+      "bytes": 1746339,
+      "executable_files": [],
+      "source_snapshot_sha256": "d942e342b3303ec4c78954713ff2e5e647ade81a134d5d4097ceb442837e4d55",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "design-taste-frontend-v1",
+      "description": "The original v1 taste-skill, preserved for projects depending on its exact behavior. The current default is `design-taste-frontend` (v2), which is a new skill. Use this v1 install name only if you need exact backward compatibility.",
+      "path": "skills/local/design-taste-frontend-v1",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/design-taste-frontend-v1",
+        "~/Documents/skills codex/.agents/skills/design-taste-frontend-v1"
+      ],
+      "sha256": "ed4e881a5aeff1a99fddf201f6f47b5665177043370202814b3c0448ab35fc90",
+      "files": 2,
+      "bytes": 22237,
+      "executable_files": [],
+      "source_snapshot_sha256": "fd90b07b9d33a8117b9e179d324976da6f887988bb097bbb10da7bad5b0e7ff2",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "design-taste-frontend-v2-experimental",
+      "description": "Old v2 (experimental) of taste-skill, the single-file dial-driven version, preserved for projects depending on its exact behavior. The current default is `design-taste-frontend` (v2). Use this install name only if you need the earlier behavior. Anti-slop frontend rules for landing pages, portfolios, and redesigns, with real design systems when applicable, audit-first redesigns and a strict pre-flight check.",
+      "path": "skills/local/design-taste-frontend-v2-experimental",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/design-taste-frontend-v2-experimental",
+        "~/Documents/skills codex/.agents/skills/design-taste-frontend-v2-experimental"
+      ],
+      "sha256": "9b6e800ef4a92bd34d692fa52b5c64e0053ce5090619a8a6cf4a1ab071b131dd",
+      "files": 2,
+      "bytes": 90700,
+      "executable_files": [],
+      "source_snapshot_sha256": "5c24803de8c7eeaa5bc8bf62a85dcd08be5349a35be34fc356571d9ed877b0fd",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "engineering-os",
+      "description": "Orquestrar tarefas de software por modo, risco e superfície afetada, selecionando workflows e especialidades do Engineering OS e consolidando gates/evidências. Reutilizar governança existente; não executar todas as skills nem aplicar a tarefas sem software.",
+      "path": "skills/local/engineering-os",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/engineering-os"
+      ],
+      "sha256": "82b76077abba9d25e68520fb46951ea850f77b5dc3f2c5afa3a86da2471c454f",
+      "files": 4,
+      "bytes": 6763,
+      "executable_files": [],
+      "source_snapshot_sha256": "d8b3737e826a691b31eff88c9ef96e15102bfcb4c882f5528ef6bceeb0dd7eb6",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "full-output-enforcement",
+      "description": "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.",
+      "path": "skills/local/full-output-enforcement",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/full-output-enforcement",
+        "~/Documents/skills codex/.agents/skills/full-output-enforcement"
+      ],
+      "sha256": "a13ef74b1b14bc60f3f21cac5f8ad22151a5aa2730860c5828c3f2d47787720a",
+      "files": 2,
+      "bytes": 3657,
+      "executable_files": [],
+      "source_snapshot_sha256": "925ecbc48154ab2653ce2899f4a308b21d55960fa62fe26d95d4c9bc78524095",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "gpt-taste",
+      "description": "Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial typography (bans 6-line wraps), gapless bento grids, strict GSAP ScrollTriggers (pinning, stacking, scrubbing), inline micro-images, and massive section spacing.",
+      "path": "skills/local/gpt-taste",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/gpt-taste",
+        "~/Documents/skills codex/.agents/skills/gpt-taste"
+      ],
+      "sha256": "526c007e22d33a4b6b51bc836df3af8944d0c0d6a990f6faed99a80890ca16d8",
+      "files": 2,
+      "bytes": 9449,
+      "executable_files": [],
+      "source_snapshot_sha256": "16baed85c5720e9a7335e9158038725f8fba5da0ce2cac1a64c4dff5b549f1b7",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "high-end-visual-design",
+      "description": "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic.",
+      "path": "skills/local/high-end-visual-design",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/high-end-visual-design",
+        "~/Documents/skills codex/.agents/skills/high-end-visual-design"
+      ],
+      "sha256": "e239e9e244849d526c0d971afdb2e70f92ddc294dcde8c779bff6fb4948b05c2",
+      "files": 2,
+      "bytes": 11626,
+      "executable_files": [],
+      "source_snapshot_sha256": "cb8434e4fb841ec17f6693a4e1b5ae0f7687e633d8e8dfefa670cee0d9293e66",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "image-to-code",
+      "description": "Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer large, readable, section-specific images instead of tiny compressed boards, generate fresh standalone images for sections or detail views instead of cropping old ones, avoid lazy under-generation, avoid cards-inside-cards-inside-cards UI, and keep the hero clean, spacious, readable, and visible on a small laptop.",
+      "path": "skills/local/image-to-code",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/image-to-code",
+        "~/Documents/skills codex/.agents/skills/image-to-code"
+      ],
+      "sha256": "e9df880ba76a623fbf5cf772bd5de1c2380876231345f04ef92191446f733455",
+      "files": 2,
+      "bytes": 37507,
+      "executable_files": [],
+      "source_snapshot_sha256": "1dada0becc95d55c25b52a5be9715967147396a6ba76f187b9dc88c8e2034263",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "imagegen-frontend-mobile",
+      "description": "Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobile products. Prioritizes clean hierarchy, comfortably readable text, strong multi-screen consistency, controlled color palettes, non-generic creative direction, textured surfaces, image-led composition, tasteful custom iconography, and clean phone mockup framing. By default, screens should be shown inside a subtle premium iPhone or similar phone mockup with a visible frame, while the main focus stays on the app content itself. This skill generates images only. It does not write code.",
+      "path": "skills/local/imagegen-frontend-mobile",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/imagegen-frontend-mobile",
+        "~/Documents/skills codex/.agents/skills/imagegen-frontend-mobile"
+      ],
+      "sha256": "cbd487cea2c0cc69dc504ad9890645ec4c16d8ebc28553fef0e76ce69af007c1",
+      "files": 2,
+      "bytes": 41391,
+      "executable_files": [],
+      "source_snapshot_sha256": "562b9d67950152027d81a89c25f4e862a0e8c3fc95af49bad64dd8f94078bbb6",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "imagegen-frontend-web",
+      "description": "Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE — generate ONE separate horizontal image FOR EVERY section. A landing page with 8 sections produces 8 images. Never compress multiple sections into one image. Enforces composition variety (not always left-text / right-image), background-image freedom, varied CTAs, varied hero scales (giant / mid / mini minimalist), narrative concept spine, second-read moments, and a single consistent palette across all images. Optimized for landing pages, marketing sites, and product comps that developers or coding models can accurately recreate.",
+      "path": "skills/local/imagegen-frontend-web",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/imagegen-frontend-web",
+        "~/Documents/skills codex/.agents/skills/imagegen-frontend-web"
+      ],
+      "sha256": "935f2eff7aa00a3b70bd056e27847274091c27839d957776db467e43abf81b83",
+      "files": 2,
+      "bytes": 37919,
+      "executable_files": [],
+      "source_snapshot_sha256": "0ad201bf20be19384a6c216215f5f8aefa5f574413e36fb1b0faa285cbd5df69",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "implementation-standards",
+      "description": "Implementar ou corrigir código seguindo convenções, tipos, erros e contratos reais do projeto. Usar durante mudanças autorizadas; não aplicar refatorações gerais por estilo.",
+      "path": "skills/local/implementation-standards",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/implementation-standards"
+      ],
+      "sha256": "29b1fde3e8d1202eab2a1dd3c51f2b06e618d458bb4cf540f7272427c5e3c5a8",
+      "files": 4,
+      "bytes": 4296,
+      "executable_files": [],
+      "source_snapshot_sha256": "644102aad82f442959318dba65885917c694fdf6963a66d87b27ebd064648da4",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "industrial-brutalist-ui",
+      "description": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints.",
+      "path": "skills/local/industrial-brutalist-ui",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/industrial-brutalist-ui",
+        "~/Documents/skills codex/.agents/skills/industrial-brutalist-ui"
+      ],
+      "sha256": "e2fb9a33820b791cb95479550f18cd78651f1cd5fb37bb592fcc602bd03bde28",
+      "files": 2,
+      "bytes": 9521,
+      "executable_files": [],
+      "source_snapshot_sha256": "a91304a22356d17f4674f115915b8aa4f1567725e463b747f34734fd64519875",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "migrate-to-codex",
+      "description": "Migrate supported instruction files, skills, agents, and MCP config into Codex project and global files.",
+      "path": "skills/local/migrate-to-codex",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/migrate-to-codex"
+      ],
+      "sha256": "463b344264e2d9efff5d6f9f31eb338c4dbb757fbee0a85167a4df19dc31209d",
+      "files": 19,
+      "bytes": 135150,
+      "executable_files": [],
+      "source_snapshot_sha256": "463b344264e2d9efff5d6f9f31eb338c4dbb757fbee0a85167a4df19dc31209d",
+      "license": "Apache-2.0",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "minimalist-ui",
+      "description": "Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",
+      "path": "skills/local/minimalist-ui",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/minimalist-ui",
+        "~/Documents/skills codex/.agents/skills/minimalist-ui"
+      ],
+      "sha256": "d78afa330ebd0c73a13dff481f39c01f6dfe238004e5c50273fa29e1556a0b3d",
+      "files": 2,
+      "bytes": 9277,
+      "executable_files": [],
+      "source_snapshot_sha256": "ec68dacb3d434e529186498f4c31427e4c34d42bf89b82553f2be6c503924e3a",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "performance-engineer",
+      "description": "Investigar gargalos de latência, throughput, renderização e recursos por medição. Ativar quando desempenho for solicitado ou houver evidência; não impor otimizações especulativas.",
+      "path": "skills/local/performance-engineer",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/performance-engineer"
+      ],
+      "sha256": "9cf1f9e3860cc71d5456c66dfcbe5642a7f5e23944331852a53c19b2286428f1",
+      "files": 4,
+      "bytes": 4320,
+      "executable_files": [],
+      "source_snapshot_sha256": "c0ab9a2f8a0179335e501214cf28e178982a4f03eb9a7303ea6c32ef56678005",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "product-ux",
+      "description": "Projetar ou validar fluxos, interações, estados, acessibilidade e responsividade de interfaces. Preservar identidade visual; não equivale a rebranding nem auditoria de backend.",
+      "path": "skills/local/product-ux",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/product-ux"
+      ],
+      "sha256": "b1bd9c8fcc795b257c284aeef1bfb6a8f72810b4b654d41610eb15b6ec4b7c48",
+      "files": 4,
+      "bytes": 4497,
+      "executable_files": [],
+      "source_snapshot_sha256": "3f4d666c9d2ed33f4c07624c34083bf7819d0ccd87393ef0e261aca434fadcbe",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "production-readiness-auditor",
+      "description": "Auditar qualidade de software com evidências executadas e gate de pré-produção. Usar em revisões de release, novas funcionalidades, mudanças de regras de negócio, formulários ou APIs, correções de bugs, refatorações com risco de regressão e auditorias solicitadas; dimensionar os testes ao risco da mudança.",
+      "path": "skills/local/production-readiness-auditor",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/production-readiness-auditor"
+      ],
+      "sha256": "56aebf1f6daf586fc4e6cd5cbc07dfe5b7f61d5f1cb485c065df33a9f644febc",
+      "files": 9,
+      "bytes": 45166,
+      "executable_files": [],
+      "source_snapshot_sha256": "a99e966f20da9f2f63e1427457655832ac4f44c2a3c25c42fa52c267cf4fc57b",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "production-reliability",
+      "description": "Investigar incidentes, logs, métricas, traces e confiabilidade operacional. Começar por observação autorizada; mitigações e mudanças em produção exigem autorização específica.",
+      "path": "skills/local/production-reliability",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/production-reliability"
+      ],
+      "sha256": "e5212f0f9400ced79357d83b102ea2da5e9aadee9e2074f7b6e2f4bce576c7ec",
+      "files": 4,
+      "bytes": 4451,
+      "executable_files": [],
+      "source_snapshot_sha256": "eddd15033c53fb22c05c8a32068ccf1bac88be5fe3ef04d3409cdc448d15984b",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "prompt-engineer",
+      "description": "Interpretar solicitações de engenharia de software e convertê-las em requisitos verificáveis, com contexto real do repositório, antes de implementar, corrigir, refatorar, auditar ou planejar. Em explicações técnicas, preservar o modo somente explicação. Não aplicar a tarefas sem relação com software.",
+      "path": "skills/local/prompt-engineer",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/prompt-engineer"
+      ],
+      "sha256": "6fb236e32e3bdfe81e2ecfdcf8557964222e22c6d086d2861d95ee1ad98df1c1",
+      "files": 4,
+      "bytes": 14677,
+      "executable_files": [],
+      "source_snapshot_sha256": "ac6951284f1d4b6b319e2900befe9559abe51f44ed8b793fdffd9dc30fb6e1c9",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "quality-engineer",
+      "description": "Projetar e executar validação de comportamento, contratos, integração, E2E e regressões com evidências reais. Dimensionar cobertura ao risco; não aprovar apenas pela existência de testes.",
+      "path": "skills/local/quality-engineer",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/quality-engineer"
+      ],
+      "sha256": "d06010695d241c8bce9469f424d34ce47f434330b82654cb73c370f504f8ca78",
+      "files": 4,
+      "bytes": 4467,
+      "executable_files": [],
+      "source_snapshot_sha256": "7cb99ee86ecbb6935b2a29cc7afa5b078a4ac2229a5bee4e6d72edbc10951081",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "redesign-existing-projects",
+      "description": "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
+      "path": "skills/local/redesign-existing-projects",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/redesign-existing-projects",
+        "~/Documents/skills codex/.agents/skills/redesign-existing-projects"
+      ],
+      "sha256": "82bdf07af3fbe4087a8196819e3fc1218a5d3a34742d5e1f270a5ad6d57e39d6",
+      "files": 2,
+      "bytes": 17332,
+      "executable_files": [],
+      "source_snapshot_sha256": "2e22d2bd87ab08ee5b416746036e702b4b6b3c9ea26c48ef35b56d032acc9a36",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "release-manager",
+      "description": "Preparar release com revisão candidata, gates, migrações, observabilidade e recuperação. Prontidão não autoriza publicação, alteração de pipeline ou operação em produção.",
+      "path": "skills/local/release-manager",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/release-manager"
+      ],
+      "sha256": "df8245732b5ee192c1f4a131a5805e0586b3a9f71db2673fd720fef609b60d6e",
+      "files": 4,
+      "bytes": 4617,
+      "executable_files": [],
+      "source_snapshot_sha256": "04fefc3c8931375b459633569823aef740170f7041f3d9d0d4f8f2c6361e83e3",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "security-auditor",
+      "description": "Auditar autenticação, autorização, isolamento, entradas, segredos e dependências com evidência e escopo permitido. Auditoria não autoriza correções nem exploração de sistemas reais.",
+      "path": "skills/local/security-auditor",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/security-auditor"
+      ],
+      "sha256": "6aa6e3985dad222a625e2ae0d16eac58a4dd7090e238733a631e74baf12c2f7c",
+      "files": 4,
+      "bytes": 4480,
+      "executable_files": [],
+      "source_snapshot_sha256": "993a4290fd784980f312dd793f38cd7607c617dc952dfad56e872ee80a6e6383",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "software-architect",
+      "description": "Analisar ou alterar arquitetura, limites de módulos, contratos e dependências; registrar decisões duradouras e transições. Não transformar uma correção localizada em redesign.",
+      "path": "skills/local/software-architect",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/software-architect"
+      ],
+      "sha256": "e5bfd172fbee82e109bff4c96fe1f1e882f786c4eb2a39e8f4a3db89e46d0b1d",
+      "files": 4,
+      "bytes": 4385,
+      "executable_files": [],
+      "source_snapshot_sha256": "11762d3b75bd80f10f6b070cf0a499815a82892b7269229ca341c18d148ccd57",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "stitch-design-taste",
+      "description": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.",
+      "path": "skills/local/stitch-design-taste",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/stitch-design-taste",
+        "~/Documents/skills codex/.agents/skills/stitch-design-taste"
+      ],
+      "sha256": "cce6d6af445f869a7b4f1f340c702c55549028e90d669d94c236ec323222aa00",
+      "files": 3,
+      "bytes": 24969,
+      "executable_files": [],
+      "source_snapshot_sha256": "aed4fb0a7f64860cdb77c3a19a245a1a09b8e4dfa228a6cf953f4a3169034db9",
+      "license": "MIT",
+      "upstream": "https://github.com/Leonxlnx/taste-skill",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "system-demo-video",
+      "description": "Criar e aprimorar vídeos de apresentação de sistemas e SaaS com motion design cinematográfico, interfaces reais em camadas e narração sincronizada, seguindo a direção aprovada do Atria v3. Use para filmes de produto, demonstrações comerciais e vídeos de lançamento; não para tutoriais de navegação ou criação de landing pages.",
+      "path": "skills/local/system-demo-video",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/system-demo-video"
+      ],
+      "sha256": "92cfea3f73710763aa5e107ab0444911c880ce1a0091a48b24538af7c2de61d5",
+      "files": 5,
+      "bytes": 17205,
+      "executable_files": [],
+      "source_snapshot_sha256": "847aaeeb7cecf5a2499c7c1a5212f97ee57a4f3760192d01fd34af2fa67f0c34",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "technical-documentation",
+      "description": "Manter conhecimento técnico persistente: arquitetura, contratos, regras, ADRs, operação e evidências. Atualizar fontes existentes e documentar apenas o necessário à mudança.",
+      "path": "skills/local/technical-documentation",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/technical-documentation"
+      ],
+      "sha256": "82ccda878ee0e2b39a5175e8a51b53e0d236d5998d2a80dfcecad68e2081f1a8",
+      "files": 4,
+      "bytes": 4400,
+      "executable_files": [],
+      "source_snapshot_sha256": "e1a0b7c87b1175e1c4cdc62dcb8870dca8cc6ce9e9ad1d7495559187c92e011d",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "ui-ux-visual-auditor",
+      "description": "Validar UI e UX de sistemas, dashboards, aplicativos e sites com inspeção visual real, fluxos interativos, responsividade, acessibilidade e regressão visual. Usar em auditorias de interface, novas telas, mudanças de componentes/layout/estados e revisões visuais pré-release; não aplicar a alterações exclusivamente de backend.",
+      "path": "skills/local/ui-ux-visual-auditor",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/ui-ux-visual-auditor"
+      ],
+      "sha256": "4f4af2901ea7b2bb1831fb903b990596504c676ef89d95b1383879e954ec307b",
+      "files": 7,
+      "bytes": 21368,
+      "executable_files": [],
+      "source_snapshot_sha256": "4550f6e2a3458031fa87e26a4d6d2a963d8ba53f184977281c27227b749cfe97",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "software-engineering-governance",
+      "description": "Governar tarefas de desenvolvimento, bugs, refatorações, requisitos, arquitetura, segurança e preparação de releases com risco, critérios de aceite e evidências verificáveis. Usar em repositórios de software; não aplicar a conversas ou artefatos sem desenvolvimento.",
+      "path": "skills/local/software-engineering-governance",
+      "category": "local",
+      "origins": [
+        "~/.agents/skills/software-engineering-governance",
+        "~/Documents/skills codex/.agents/skills/software-engineering-governance"
+      ],
+      "sha256": "64486f2f86e1fc527f82d8db81139a495846a3be458f9a99377da473b1ee5932",
+      "files": 35,
+      "bytes": 243803,
+      "executable_files": [],
+      "source_snapshot_sha256": "cbe9400c39f1878b5265a8a99a1c16788cf90587717b84065b760f0b18150437",
+      "license": "MIT",
+      "license_scope": "Original contributions licensed by Maximiano11",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "imagegen",
+      "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.",
+      "path": "skills/system/imagegen",
+      "category": "system",
+      "origins": [
+        "~/.codex/skills/.system/imagegen"
+      ],
+      "sha256": "2b8e99e5b31e4bd62b6aa78ded74e444deeb98b3c4c646c1384eaf96d987069f",
+      "files": 12,
+      "bytes": 126829,
+      "executable_files": [],
+      "source_snapshot_sha256": "2b8e99e5b31e4bd62b6aa78ded74e444deeb98b3c4c646c1384eaf96d987069f",
+      "license": "Apache-2.0",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "openai-docs",
+      "description": "Use for Codex models/pricing, scheduled tasks, skills, settings, setup, troubleshooting, customization, automations, and self-knowledge—including 'you,' 'your,' 'this app,' or 'this coding agent' when they refer to Codex—and for OpenAI APIs/products and ChatGPT Work. Also use for model choice/migration, prompting, SDKs, Responses, Realtime, agents, evals, and Chat/Work/Codex comparisons. Do not use for generic app/software tasks that merely mention Codex.",
+      "path": "skills/system/openai-docs",
+      "category": "system",
+      "origins": [
+        "~/.codex/skills/.system/openai-docs"
+      ],
+      "sha256": "9dcdd667ad4b277fe307dacfbbd7021b5d90450c14ced6eb13f1a6bd69f6241f",
+      "files": 17,
+      "bytes": 92622,
+      "executable_files": [],
+      "source_snapshot_sha256": "9dcdd667ad4b277fe307dacfbbd7021b5d90450c14ced6eb13f1a6bd69f6241f",
+      "license": "Apache-2.0",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Create or update a Codex skill with appropriately scoped instructions and any needed supporting resources.",
+      "path": "skills/system/skill-creator",
+      "category": "system",
+      "origins": [
+        "~/.codex/skills/.system/skill-creator"
+      ],
+      "sha256": "9fa39f6cd86879950408d3e7272076be18fec463412996077cfd3e11dce92bf8",
+      "files": 9,
+      "bytes": 53322,
+      "executable_files": [],
+      "source_snapshot_sha256": "9fa39f6cd86879950408d3e7272076be18fec463412996077cfd3e11dce92bf8",
+      "license": "Apache-2.0",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "skill-installer",
+      "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+      "path": "skills/system/skill-installer",
+      "category": "system",
+      "origins": [
+        "~/.codex/skills/.system/skill-installer"
+      ],
+      "sha256": "7ab73508f51276eb22173e9ae6bedab2bd687e774e257fc6af52cdd354173a3e",
+      "files": 8,
+      "bytes": 32479,
+      "executable_files": [],
+      "source_snapshot_sha256": "7ab73508f51276eb22173e9ae6bedab2bd687e774e257fc6af52cdd354173a3e",
+      "license": "Apache-2.0",
+      "distribution": "included-open-source"
+    },
+    {
+      "name": "web-design-guidelines",
+      "category": "local",
+      "origins": [
+        "~/.codex/skills/web-design-guidelines"
+      ],
+      "sha256": null,
+      "files": 1,
+      "bytes": 1231,
+      "executable_files": [],
+      "source_snapshot_sha256": "e47e662d2b4f14eae5a13d89fba84e05da89bce90aa43b1203c188f763f90001",
+      "original_export_path": "skills/local/web-design-guidelines",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "review-agent",
+      "category": "system",
+      "origins": [
+        "~/.codex/skills/.system/review-agent"
+      ],
+      "sha256": null,
+      "files": 2,
+      "bytes": 2913,
+      "executable_files": [],
+      "source_snapshot_sha256": "1d5b8126c2844c8c230a96af1f5e16836a8cdbde83006158a8776a9345210f2b",
+      "original_export_path": "skills/system/review-agent",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-code-connect",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-code-connect"
+      ],
+      "sha256": null,
+      "files": 3,
+      "bytes": 60134,
+      "executable_files": [],
+      "source_snapshot_sha256": "0fd9e2ea4ffe4c538f4fee58293e35f7608d6c7bc661881a6d817a48b480ef4c",
+      "original_export_path": "skills/plugins/figma/figma-code-connect",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-code-workflows",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-code-workflows"
+      ],
+      "sha256": null,
+      "files": 1,
+      "bytes": 4582,
+      "executable_files": [],
+      "source_snapshot_sha256": "70a1fce17abf3f640b822acf75b93da8596f8c2eb4e8e0f7ee6a278263b142e1",
+      "original_export_path": "skills/plugins/figma/figma-code-workflows",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-create-new-file",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-create-new-file"
+      ],
+      "sha256": null,
+      "files": 1,
+      "bytes": 1841,
+      "executable_files": [],
+      "source_snapshot_sha256": "a0b5bb376fa3c892ee7cfd9b855138ba9c440f885eb91fe4bc3c787ea8b27752",
+      "original_export_path": "skills/plugins/figma/figma-create-new-file",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-design-to-code",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-design-to-code"
+      ],
+      "sha256": null,
+      "files": 1,
+      "bytes": 4066,
+      "executable_files": [],
+      "source_snapshot_sha256": "c4a4a59390ef488aa82c9e259f8e7cc171f127c86e1b1bb59ada401d4ccda9ec",
+      "original_export_path": "skills/plugins/figma/figma-design-to-code",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-generate-design",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-generate-design"
+      ],
+      "sha256": null,
+      "files": 3,
+      "bytes": 42563,
+      "executable_files": [],
+      "source_snapshot_sha256": "82205fd39417e85a05a444f47cfd4fa41aacac91a8566419e910c1b2c3159472",
+      "original_export_path": "skills/plugins/figma/figma-generate-design",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-generate-diagram",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-generate-diagram"
+      ],
+      "sha256": null,
+      "files": 8,
+      "bytes": 110887,
+      "executable_files": [],
+      "source_snapshot_sha256": "bfa8e27ccffe7cc71d0eb7b1d7e3ca074a7604262972044fb08287efa3fb98d3",
+      "original_export_path": "skills/plugins/figma/figma-generate-diagram",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-generate-library",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-generate-library"
+      ],
+      "sha256": null,
+      "files": 16,
+      "bytes": 221842,
+      "executable_files": [],
+      "source_snapshot_sha256": "b955c0f9eac46e7c4cb20d2aa80412474ffd61180fb0229b74adc6928dc1f8a0",
+      "original_export_path": "skills/plugins/figma/figma-generate-library",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-generative-plugins",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-generative-plugins"
+      ],
+      "sha256": null,
+      "files": 2,
+      "bytes": 16831,
+      "executable_files": [],
+      "source_snapshot_sha256": "26227a79b7c287ce919f75730508bc58e90b94bea3d4d33d8ec6c9aaf36f84bc",
+      "original_export_path": "skills/plugins/figma/figma-generative-plugins",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-implement-motion",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-implement-motion"
+      ],
+      "sha256": null,
+      "files": 7,
+      "bytes": 68270,
+      "executable_files": [],
+      "source_snapshot_sha256": "218160d8882584de3e66321a7164a7b259a27b9d53a07b369922df58932c062d",
+      "original_export_path": "skills/plugins/figma/figma-implement-motion",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-shaders",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-shaders"
+      ],
+      "sha256": null,
+      "files": 2,
+      "bytes": 16607,
+      "executable_files": [],
+      "source_snapshot_sha256": "310faae58e03124705652afb616db5b20d656bdac53e737a65213ae4d37fddb1",
+      "original_export_path": "skills/plugins/figma/figma-shaders",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-spec",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-spec"
+      ],
+      "sha256": null,
+      "files": 1,
+      "bytes": 6097,
+      "executable_files": [],
+      "source_snapshot_sha256": "c1680239b83f590ce476e429681efa2f57c949f4defca76ecf9c0f54c13f8e53",
+      "original_export_path": "skills/plugins/figma/figma-spec",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-swiftui",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-swiftui"
+      ],
+      "sha256": null,
+      "files": 3,
+      "bytes": 60369,
+      "executable_files": [],
+      "source_snapshot_sha256": "8b8bebd225b0d02fadfb7286d7a541ede1eef48e750943129e942edd39a17a38",
+      "original_export_path": "skills/plugins/figma/figma-swiftui",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-use",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-use"
+      ],
+      "sha256": null,
+      "files": 21,
+      "bytes": 649922,
+      "executable_files": [],
+      "source_snapshot_sha256": "6e8492d46b4a47169ebe7d07b7e6660bd7607b1a6af6a55e18506de174c62db5",
+      "original_export_path": "skills/plugins/figma/figma-use",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-use-figjam",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-use-figjam"
+      ],
+      "sha256": null,
+      "files": 14,
+      "bytes": 149321,
+      "executable_files": [],
+      "source_snapshot_sha256": "2d3b755c2bcedfb3b9a4b9f398f49a39e1ba0da079a7d9f2381e8cc3e03cece4",
+      "original_export_path": "skills/plugins/figma/figma-use-figjam",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-use-motion",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-use-motion"
+      ],
+      "sha256": null,
+      "files": 3,
+      "bytes": 31467,
+      "executable_files": [],
+      "source_snapshot_sha256": "fe9a5d8fcf3e40df8933fd4ea657238e7e57d016688e95f12d5e20013d466304",
+      "original_export_path": "skills/plugins/figma/figma-use-motion",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "figma-use-slides",
+      "category": "plugins/figma",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/skills/figma-use-slides"
+      ],
+      "sha256": null,
+      "files": 7,
+      "bytes": 69516,
+      "executable_files": [],
+      "source_snapshot_sha256": "b63e682efa075258ed0ed492e38e5fd1461e61ffaf240378e7cd8a38800c9da9",
+      "original_export_path": "skills/plugins/figma/figma-use-slides",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "google-docs",
+      "category": "plugins/google-drive",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.22/skills/google-docs"
+      ],
+      "sha256": null,
+      "files": 24,
+      "bytes": 243837,
+      "executable_files": [],
+      "source_snapshot_sha256": "2d43e4c473575925b179465664253b2e4cc75566c1147046b84b01eba7f90e83",
+      "original_export_path": "skills/plugins/google-drive/google-docs",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "google-drive",
+      "category": "plugins/google-drive",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.22/skills/google-drive"
+      ],
+      "sha256": null,
+      "files": 10,
+      "bytes": 144914,
+      "executable_files": [],
+      "source_snapshot_sha256": "06dac16be85076b83183eedf3835dc57e959f2fb68a04ae9972dfcaf56ceac15",
+      "original_export_path": "skills/plugins/google-drive/google-drive",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "google-drive-comments",
+      "category": "plugins/google-drive",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.22/skills/google-drive-comments"
+      ],
+      "sha256": null,
+      "files": 2,
+      "bytes": 4590,
+      "executable_files": [],
+      "source_snapshot_sha256": "d0b81d775d49d1d571f3255598a65bfcb9ca8905131fdf45a01ebb25bca952ef",
+      "original_export_path": "skills/plugins/google-drive/google-drive-comments",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "google-sheets",
+      "category": "plugins/google-drive",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.22/skills/google-sheets"
+      ],
+      "sha256": null,
+      "files": 13,
+      "bytes": 138743,
+      "executable_files": [],
+      "source_snapshot_sha256": "33bce93206ac7c2ab35c8a210438875886929db4e262379835480d28f6e9ee34",
+      "original_export_path": "skills/plugins/google-drive/google-sheets",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "google-slides",
+      "category": "plugins/google-drive",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.22/skills/google-slides"
+      ],
+      "sha256": null,
+      "files": 16,
+      "bytes": 225122,
+      "executable_files": [],
+      "source_snapshot_sha256": "c9236ea8564d55fa1c8ecc513001d299609023b948ca02fbac357aba0ba4e237",
+      "original_export_path": "skills/plugins/google-drive/google-slides",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "maintain-space",
+      "category": "plugins/pages",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/pages/0.1.25/skills/maintain-space"
+      ],
+      "sha256": null,
+      "files": 2,
+      "bytes": 6839,
+      "executable_files": [],
+      "source_snapshot_sha256": "f70b744e0f88b946a5e87af3183aae9be7dbf6d8939f12a184661615ff55cdae",
+      "original_export_path": "skills/plugins/pages/maintain-space",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "manage-schedules",
+      "category": "plugins/pages",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/pages/0.1.25/skills/manage-schedules"
+      ],
+      "sha256": null,
+      "files": 2,
+      "bytes": 7920,
+      "executable_files": [],
+      "source_snapshot_sha256": "901c5e74d1e53abbeb159645cf0edd7a99256a572a10c00db416783a66e6baef",
+      "original_export_path": "skills/plugins/pages/manage-schedules",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "organize-space",
+      "category": "plugins/pages",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/pages/0.1.25/skills/organize-space"
+      ],
+      "sha256": null,
+      "files": 2,
+      "bytes": 9194,
+      "executable_files": [],
+      "source_snapshot_sha256": "7590b7b4eea0ddcbb679659e5e3b47c4ce55c3a4f01d5fbe1c686fee4b353978",
+      "original_export_path": "skills/plugins/pages/organize-space",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "write-page",
+      "category": "plugins/pages",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/pages/0.1.25/skills/write-page"
+      ],
+      "sha256": null,
+      "files": 5,
+      "bytes": 50136,
+      "executable_files": [],
+      "source_snapshot_sha256": "940953317a5c490ac6a0806ad80f5b73de9ffae0a94da221528075e2d1037ca4",
+      "original_export_path": "skills/plugins/pages/write-page",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "create-plugin",
+      "category": "plugins/plugin-creator",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/plugin-creator/0.1.28/skills/create-plugin"
+      ],
+      "sha256": null,
+      "files": 9,
+      "bytes": 27245,
+      "executable_files": [],
+      "source_snapshot_sha256": "bcabcc476b1c4d8cf047cd68852b49261086fc3cb54e5a6a6b9d7c875f16a63f",
+      "original_export_path": "skills/plugins/plugin-creator/create-plugin",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "prepare-plugin-submission",
+      "category": "plugins/plugin-creator",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/plugin-creator/0.1.28/skills/prepare-plugin-submission"
+      ],
+      "sha256": null,
+      "files": 4,
+      "bytes": 32074,
+      "executable_files": [],
+      "source_snapshot_sha256": "c9506318ca0b2573357373cec547772b0677f151564665d123fd7c34455d1ce7",
+      "original_export_path": "skills/plugins/plugin-creator/prepare-plugin-submission",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "update-plugin",
+      "category": "plugins/plugin-creator",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/plugin-creator/0.1.28/skills/update-plugin"
+      ],
+      "sha256": null,
+      "files": 3,
+      "bytes": 17080,
+      "executable_files": [],
+      "source_snapshot_sha256": "bd15758b4180277d04a8cf3fb4ec13d606436f81918fb8d94119b344a4ddcd78",
+      "original_export_path": "skills/plugins/plugin-creator/update-plugin",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "plugin-management",
+      "category": "plugins/plugin-management",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/plugin-management/0.1.0/skills/plugin-management"
+      ],
+      "sha256": null,
+      "files": 1,
+      "bytes": 2983,
+      "executable_files": [],
+      "source_snapshot_sha256": "5dd8381aaac57a8470977795ea14dccfd1d314940cfb2ea7530c53a6aaf3f3c3",
+      "original_export_path": "skills/plugins/plugin-management/plugin-management",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "sites",
+      "category": "plugins/sites",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/sites/1.1.1/skills/sites"
+      ],
+      "sha256": null,
+      "files": 133,
+      "bytes": 906726,
+      "executable_files": [
+        "templates/vinext-starter/scripts/build-verified.sh",
+        "templates/vinext-starter/scripts/install-ci.sh",
+        "templates/vinext-starter/scripts/install-pnpm.sh",
+        "templates/vinext-starter/scripts/sites-env.sh",
+        "templates/worker-esm-starter/scripts/build.sh"
+      ],
+      "source_snapshot_sha256": "1737819d357467aca73f596f440f8a4a6be1569155f026906956187c812a6444",
+      "original_export_path": "skills/plugins/sites/sites",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "sites-remix",
+      "category": "plugins/sites",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/sites/1.1.1/skills/sites-remix"
+      ],
+      "sha256": null,
+      "files": 1,
+      "bytes": 7348,
+      "executable_files": [],
+      "source_snapshot_sha256": "db03922e379b2271cef04a98c3d4917ff2e10cff604c2411ac200055f09fd234",
+      "original_export_path": "skills/plugins/sites/sites-remix",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "create-pet",
+      "category": "plugins/work-pets",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/skills/create-pet"
+      ],
+      "sha256": null,
+      "files": 21,
+      "bytes": 197339,
+      "executable_files": [],
+      "source_snapshot_sha256": "446152dd93227ccf1189d750e3f740e465647c636bd067bcee510b662d5e5038",
+      "original_export_path": "skills/plugins/work-pets/create-pet",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "pets",
+      "category": "plugins/work-pets",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/skills/pets"
+      ],
+      "sha256": null,
+      "files": 2,
+      "bytes": 3756,
+      "executable_files": [],
+      "source_snapshot_sha256": "ad1975d256c01a559807dffde4b1d3ce996c333a9c6e341070cc089a090e287a",
+      "original_export_path": "skills/plugins/work-pets/pets",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "update-pet",
+      "category": "plugins/work-pets",
+      "origins": [
+        "~/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/skills/update-pet"
+      ],
+      "sha256": null,
+      "files": 2,
+      "bytes": 4492,
+      "executable_files": [],
+      "source_snapshot_sha256": "5394de8c1b36c4c89bf02f89583d743c7989df30c2407ebe817297f8cc56b78c",
+      "original_export_path": "skills/plugins/work-pets/update-pet",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "documents",
+      "category": "plugins/documents",
+      "origins": [
+        "~/.codex/plugins/cache/openai-primary-runtime/documents/26.1020.11618/skills/documents"
+      ],
+      "sha256": null,
+      "files": 80,
+      "bytes": 420146,
+      "executable_files": [],
+      "source_snapshot_sha256": "a6956ebb8ada123be7f25fa0c338965dc48c8c6d8f756c6f988d738fe72f06b3",
+      "original_export_path": "skills/plugins/documents/documents",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "pdf",
+      "category": "plugins/pdf",
+      "origins": [
+        "~/.codex/plugins/cache/openai-primary-runtime/pdf/26.1020.11618/skills/pdf"
+      ],
+      "sha256": null,
+      "files": 4,
+      "bytes": 10367,
+      "executable_files": [],
+      "source_snapshot_sha256": "2987b9eb855532e84bd06d1b42186ae73e9880d7ce6c3a356eab56226dbb70b9",
+      "original_export_path": "skills/plugins/pdf/pdf",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "Presentations",
+      "category": "plugins/presentations",
+      "origins": [
+        "~/.codex/plugins/cache/openai-primary-runtime/presentations/26.1020.11618/skills/presentations"
+      ],
+      "sha256": null,
+      "files": 61,
+      "bytes": 664020,
+      "executable_files": [],
+      "source_snapshot_sha256": "23bd17c7e18df2d1a67822a7f23a459e4d3dde70b4f8823ba42d9f8cc29a150b",
+      "original_export_path": "skills/plugins/presentations/presentations",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "excel-live-control",
+      "category": "plugins/spreadsheets",
+      "origins": [
+        "~/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.1020.11618/skills/excel-live-control"
+      ],
+      "sha256": null,
+      "files": 13,
+      "bytes": 122721,
+      "executable_files": [],
+      "source_snapshot_sha256": "edb459f08ff897c3aa7b9dd5d5ca2de0fc3970150fc643e688d52ad52c075376",
+      "original_export_path": "skills/plugins/spreadsheets/excel-live-control",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "Spreadsheets",
+      "category": "plugins/spreadsheets",
+      "origins": [
+        "~/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.1020.11618/skills/spreadsheets"
+      ],
+      "sha256": null,
+      "files": 19,
+      "bytes": 153985,
+      "executable_files": [],
+      "source_snapshot_sha256": "2e6988e3fa7373fd3d35c4e2c3c3a590a4c27a2b0e2ac89bce9c31fb20c3b74d",
+      "original_export_path": "skills/plugins/spreadsheets/spreadsheets",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "visualize",
+      "category": "plugins/visualize",
+      "origins": [
+        "~/.codex/plugins/cache/openai-bundled/visualize/1.0.55/skills/visualize"
+      ],
+      "sha256": null,
+      "files": 13,
+      "bytes": 174759,
+      "executable_files": [],
+      "source_snapshot_sha256": "7cbba844ab1a4640f7b6f98d47830e7431b8331a5dc87346ac822aa1d8f27bca",
+      "original_export_path": "skills/plugins/visualize/visualize",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    },
+    {
+      "name": "template-creator",
+      "category": "plugins/template-creator",
+      "origins": [
+        "~/.codex/plugins/cache/openai-primary-runtime/template-creator/26.1020.11618/skills/template-creator"
+      ],
+      "sha256": null,
+      "files": 6,
+      "bytes": 71775,
+      "executable_files": [],
+      "source_snapshot_sha256": "3ac073ed84e26e03e9fd7938ec55cd9b94c3b09e1f31563066267786335113ed",
+      "original_export_path": "skills/plugins/template-creator/template-creator",
+      "path": null,
+      "distribution": "external-reference-only",
+      "license_status": "Redistribution restricted or no applicable open-source license established"
+    }
+  ],
+  "deduplicated_origins": [
+    {
+      "source": "~/Documents/skills codex/.agents/skills/brandkit",
+      "canonical": "skills/local/brandkit",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/design-taste-frontend",
+      "canonical": "skills/local/design-taste-frontend",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/design-taste-frontend-v1",
+      "canonical": "skills/local/design-taste-frontend-v1",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/design-taste-frontend-v2-experimental",
+      "canonical": "skills/local/design-taste-frontend-v2-experimental",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/full-output-enforcement",
+      "canonical": "skills/local/full-output-enforcement",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/gpt-taste",
+      "canonical": "skills/local/gpt-taste",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/high-end-visual-design",
+      "canonical": "skills/local/high-end-visual-design",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/image-to-code",
+      "canonical": "skills/local/image-to-code",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/imagegen-frontend-mobile",
+      "canonical": "skills/local/imagegen-frontend-mobile",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/imagegen-frontend-web",
+      "canonical": "skills/local/imagegen-frontend-web",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/industrial-brutalist-ui",
+      "canonical": "skills/local/industrial-brutalist-ui",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/minimalist-ui",
+      "canonical": "skills/local/minimalist-ui",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/redesign-existing-projects",
+      "canonical": "skills/local/redesign-existing-projects",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/software-engineering-governance",
+      "canonical": "skills/local/software-engineering-governance",
+      "reason": "byte-identical exported skill tree"
+    },
+    {
+      "source": "~/Documents/skills codex/.agents/skills/stitch-design-taste",
+      "canonical": "skills/local/stitch-design-taste",
+      "reason": "byte-identical exported skill tree"
+    }
+  ],
+  "excluded": [
+    {
+      "root": "~/.codex/skills/migrate-to-codex",
+      "path": "scripts/__pycache__",
+      "reason": "runtime/cache/validation/symlink directory"
+    },
+    {
+      "root": "~/.codex/skills/migrate-to-codex",
+      "path": "scripts/migrate/__pycache__",
+      "reason": "runtime/cache/validation/symlink directory"
+    },
+    {
+      "root": "~/.codex/skills/migrate-to-codex",
+      "path": "scripts/utils/__pycache__",
+      "reason": "runtime/cache/validation/symlink directory"
+    },
+    {
+      "root": "~/.codex/skills/production-readiness-auditor",
+      "path": "scripts/__pycache__",
+      "reason": "runtime/cache/validation/symlink directory"
+    },
+    {
+      "root": "~/.agents/skills/software-engineering-governance",
+      "path": "validation",
+      "reason": "runtime/cache/validation/symlink directory"
+    },
+    {
+      "root": "~/Documents/skills codex/.agents/skills/software-engineering-governance",
+      "path": "validation",
+      "reason": "runtime/cache/validation/symlink directory"
+    },
+    {
+      "root": "~/.codex/plugins/cache/openai-primary-runtime/presentations/26.1020.11618/skills/presentations",
+      "path": "container_tools/__pycache__",
+      "reason": "runtime/cache/validation/symlink directory"
+    },
+    {
+      "root": "~/Documents/skills codex/engineering-os",
+      "path": "evaluations/model-run-2026-10-23/form/http-server.log",
+      "reason": "runtime, local configuration, backup or sensitive filename"
+    }
+  ],
+  "framework": {
+    "path": "frameworks/engineering-os",
+    "sha256": "152339d44074b053ed48fed0b8cc9f2aa8d8bf69939eca1b02bffd70c800d5fc",
+    "files": 204,
+    "source_snapshot_sha256": "6cd70ff05ef8c9db5c05a8e801c2751a1db3bee61f60667915a0519a794fe08a"
+  },
+  "third_party_license_files": [],
+  "notes": [
+    "Individual skill resources preserve original bytes except excluded runtime/cache/history files.",
+    "Plugin tools and native runtimes are not supplied by copying SKILL.md.",
+    "Pages skill files are archived as installed resources; Pages skills are disabled in the source session.",
+    "A nested starter-workflow is a plugin-creator asset, not a separate library entry."
+  ],
+  "license": "MIT for original contributions; third-party licenses retained",
+  "distribution_counts": {
+    "included_open_source": 36,
+    "external_references_only": 43,
+    "catalog_total": 79
+  },
+  "licensing_sources": [
+    {
+      "component": "taste-skill",
+      "license": "MIT",
+      "url": "https://github.com/Leonxlnx/taste-skill/blob/main/LICENSE"
+    },
+    {
+      "component": "OpenAI native skills",
+      "license": "Component-specific; only explicit Apache-2.0 copies included",
+      "source": "Original LICENSE.txt files shipped with each included skill"
+    }
+  ]
+}

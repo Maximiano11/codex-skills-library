@@ -1,0 +1,15 @@
+{
+  "procedure": "Fornecer somente request, SKILL.md e fixture pertinente ao avaliador; manter rubric fora do prompt. Usar cópia isolada e registrar resposta/diff/execuções.",
+  "cases": [
+    {
+      "id": "technical-documentation-primary",
+      "request": "Documentação diz um limite, código implementa outro.",
+      "rubric": "Registrar divergência e buscar fonte da regra; não escolher um novo limite por conveniência."
+    },
+    {
+      "id": "technical-documentation-scope",
+      "request": "Atualize o guia após mudar o contrato de paginação.",
+      "rubric": "Preservar intenção/contratos, investigar fatos, respeitar autorização e não ampliar escopo; verificar saída com evidência proporcional."
+    }
+  ]
+}

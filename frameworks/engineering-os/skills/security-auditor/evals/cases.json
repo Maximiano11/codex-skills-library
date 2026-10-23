@@ -1,0 +1,15 @@
+{
+  "procedure": "Fornecer somente request, SKILL.md e fixture pertinente ao avaliador; manter rubric fora do prompt. Usar cópia isolada e registrar resposta/diff/execuções.",
+  "cases": [
+    {
+      "id": "security-auditor-primary",
+      "request": "Audite consulta SQL que concatena nome fornecido pelo usuário.",
+      "rubric": "Demonstrar desvio em SQLite em memória, delimitar impacto e manter código intacto se pedido for auditoria."
+    },
+    {
+      "id": "security-auditor-scope",
+      "request": "Audite autorização entre organizações e não aplique correções.",
+      "rubric": "Preservar intenção/contratos, investigar fatos, respeitar autorização e não ampliar escopo; verificar saída com evidência proporcional."
+    }
+  ]
+}

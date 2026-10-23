@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "quality-audit",
+  "activation": "Avaliação abrangente de qualidade no escopo solicitado",
+  "skills": [
+    "prompt-engineer",
+    "quality-engineer",
+    "code-reviewer",
+    "technical-documentation"
+  ],
+  "steps": [
+    {
+      "id": "inventory",
+      "depends_on": [],
+      "action": "Identificar contratos, runners, critérios obrigatórios e infraestrutura"
+    },
+    {
+      "id": "select",
+      "depends_on": [
+        "inventory"
+      ],
+      "action": "Construir matriz critério–fonte–cenário–evidência proporcional ao impacto"
+    },
+    {
+      "id": "execute",
+      "depends_on": [
+        "select"
+      ],
+      "action": "Executar verificações seguras autorizadas, sem modificar regras para obter verde"
+    },
+    {
+      "id": "assess",
+      "depends_on": [
+        "execute"
+      ],
+      "action": "Classificar falhas, skips, lacunas e riscos; auditar sem correções não solicitadas"
+    },
+    {
+      "id": "deliver",
+      "depends_on": [
+        "assess"
+      ],
+      "action": "Consolidar estado de validação e evidências sem duplicar auditorias existentes"
+    }
+  ],
+  "approval": "Todos os critérios obrigatórios do escopo aprovados e evidenciados para VALIDATED.",
+  "stop": "Falha obrigatória ou achado crítico aberto; ausência de evidência mantém validação parcial.",
+  "outputs": [
+    "Resumo proporcional da decisão/entrega",
+    "Evidências e estado de validação no escopo",
+    "Pendências e limitações relevantes"
+  ],
+  "mode_rule": "Em analyze, explain, audit ou plan, executar somente inspeção e a entrega pedida. Etapas de implementação não ficam autorizadas por selecionar este workflow."
+}
