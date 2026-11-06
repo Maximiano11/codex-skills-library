@@ -10,7 +10,7 @@ ou scanner sem alertas não comprovam uma experiência utilizável.
 
 ## Escopo e descoberta
 
-Leia AGENTS.md aplicáveis. Identifique plataforma, rotas/telas, componentes,
+Leia AGENTS.md/CLAUDE.md aplicáveis. Identifique plataforma, rotas/telas, componentes,
 design system, tokens, temas, referências aprovadas, perfis, idiomas e jornadas.
 Localize comandos para executar a aplicação e testes já existentes. Preserve marca,
 stack, padrões e decisões aprovadas; não imponha outra estética ou um redesign.

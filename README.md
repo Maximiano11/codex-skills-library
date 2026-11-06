@@ -26,6 +26,19 @@ runtimes nativos neste repositório.
 - [Atualização e remoção](#atualização-e-remoção)
 - [Licenças](#licenças)
 
+## Uso no Claude Code
+
+As skills de `skills/local` são compatíveis com o Claude Code (exceto `migrate-to-codex`).
+
+```sh
+git clone https://github.com/Maximiano11/codex-skills-library.git ~/.claude/skill-sources/codex-skills-library
+~/.claude/skill-sources/codex-skills-library/scripts/install-claude.sh
+```
+
+Instala como symlinks em `~/.claude/skills`; para atualizar, `git pull` no clone.
+No Claude Code, `AGENTS.md` equivale a `CLAUDE.md` e `$skill` a `/skill`. Skills de
+geração de imagem usam uma ferramenta MCP de imagem se houver; senão, entregam prompts.
+
 ## Instalação global do Engineering OS
 
 ### Requisitos

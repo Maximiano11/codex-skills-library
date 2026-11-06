@@ -3,6 +3,8 @@ name: imagegen-frontend-web
 description: Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE — generate ONE separate horizontal image FOR EVERY section. A landing page with 8 sections produces 8 images. Never compress multiple sections into one image. Enforces composition variety (not always left-text / right-image), background-image freedom, varied CTAs, varied hero scales (giant / mid / mini minimalist), narrative concept spine, second-read moments, and a single consistent palette across all images. Optimized for landing pages, marketing sites, and product comps that developers or coding models can accurately recreate.
 ---
 
+> **Agents without native image generation (e.g. Claude Code):** first look for an image tool (MCP image server, `generate_image`, etc.) and use it. If none is available, deliver the same output as **one ready-to-paste image-generation prompt per section** (labeled "Section X of N: <name>"), following every rule below, so the user can render them in an image model. Say clearly that the images were not generated.
+
 # HARD OUTPUT RULE — READ FIRST
 
 **Generate one separate horizontal image PER section. Always. No exceptions.**

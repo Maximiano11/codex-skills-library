@@ -1,6 +1,6 @@
 ---
 name: image-to-code
-description: Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer large, readable, section-specific images instead of tiny compressed boards, generate fresh standalone images for sections or detail views instead of cropping old ones, avoid lazy under-generation, avoid cards-inside-cards-inside-cards UI, and keep the hero clean, spacious, readable, and visible on a small laptop.
+description: Elite website image-to-code skill for coding agents (Codex, Claude Code). For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. It must prefer large, readable, section-specific images instead of tiny compressed boards, generate fresh standalone images for sections or detail views instead of cropping old ones, avoid lazy under-generation, avoid cards-inside-cards-inside-cards UI, and keep the hero clean, spacious, readable, and visible on a small laptop.
 ---
 
 # CORE DIRECTIVE: IMAGE-FIRST WEBSITE DESIGN TO CODE
@@ -102,7 +102,7 @@ Interpretation:
 - If the user says “editorial”, allow stronger type and more asymmetry.
 - Keep sections breathable.
 - Prefer readability over squeezing too much into one image.
-- In Codex, bias strongly toward larger, more analyzable section images.
+- Bias strongly toward larger, more analyzable section images.
 - If more images would improve extraction quality, generate more images.
 - Do not be lazy with image count.
 - Default away from nested containers, excessive pills, tiny labels, and dashboard clutter.
@@ -110,6 +110,8 @@ Interpretation:
 ---
 
 ## 2. MANDATORY IMAGE-FIRST RULE
+
+> **Agents without native image generation (e.g. Claude Code):** first check for an image tool (MCP image server, `generate_image`, etc.) and use it. If none exists, keep the image-first discipline with a *visual reference* instead: (a) use images the user provides, or (b) build a quick static HTML mock per section, screenshot it with the available browser tool, and analyze that screenshot as the design source. If neither is possible, write one detailed image-generation prompt per section for the user to run elsewhere, then proceed from a written design spec. Never skip the reference step silently.
 
 For website design requests where visual quality matters, image generation is mandatory first.
 
@@ -159,13 +161,13 @@ Never reduce image count just for convenience if that harms quality.
 
 ---
 
-## 4. CODEX-SPECIFIC SECTION IMAGE RULE
+## 4. SECTION IMAGE RULE
 
-Inside Codex, do not compress too many website sections into one single image if that would make the text, spacing, buttons, or layout details too small to analyze properly.
+Do not compress too many website sections into one single image if that would make the text, spacing, buttons, or layout details too small to analyze properly.
 
-In Codex, prefer separate large images per section.
+Prefer separate large images per section.
 
-Default rule inside Codex:
+Default rule:
 - 1 section requested → generate 1 image
 - 2 sections requested → generate 2 images
 - 3 sections requested → generate 3 images
@@ -194,8 +196,7 @@ Do not default to:
 
 If necessary, generate more images rather than shrinking everything.
 
-Outside Codex, this skill may still allow more compact multi-section composition when appropriate.
-Inside Codex, prioritize section clarity and extraction accuracy.
+Prioritize section clarity and extraction accuracy over compact multi-section composition.
 
 ---
 

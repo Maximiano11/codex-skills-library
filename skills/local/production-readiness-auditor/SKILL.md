@@ -10,7 +10,7 @@ teste executado. Teste aprovado não significa ausência absoluta de defeitos.
 
 ## Descobrir antes de modificar
 
-Confirme o repositório alvo. Inspecione AGENTS.md aplicáveis, skills locais, estrutura,
+Confirme o repositório alvo. Inspecione AGENTS.md/CLAUDE.md aplicáveis, skills locais, estrutura,
 manifestos, lockfiles, scripts, testes, build, deploy e CI/CD. Mapeie frontend,
 backend, persistência, serviços externos, autenticação, formulários e regras de
 negócio. Registre arquivos e comandos que sustentam o inventário; não presuma stack.
@@ -64,7 +64,7 @@ impacto e política de release; incerteza não equivale a aceite.
 
 ## Persistência e gate
 
-Acrescente o conteúdo de [AGENTS.qa.md](assets/AGENTS.qa.md) ao AGENTS.md do projeto
+Acrescente o conteúdo de [AGENTS.qa.md](assets/AGENTS.qa.md) ao arquivo de instruções do projeto (AGENTS.md no Codex, CLAUDE.md no Claude Code)
 sem substituir instruções existentes ou duplicar o bloco. Antes de alterar CI/CD
 de produção, apresente o diff concreto e obtenha aprovação, conforme a autorização
 do usuário. Prepare a proposta localmente, fora do pipeline ativo, até essa etapa.
