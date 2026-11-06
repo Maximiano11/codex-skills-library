@@ -87,7 +87,7 @@ Depois de identificar o provedor, prepare um diff com:
 5. Aprovação antes de alterar pipeline de produção, sem publicar automaticamente.
 
 Se não há provedor/deploy informado, registre estas dependências como pendentes.
-Não invente GitHub Actions, Vercel ou outro destino. Regras no AGENTS.md orientam
+Não invente GitHub Actions, Vercel ou outro destino. Regras no AGENTS.md/CLAUDE.md orientam
 agentes, mas não impõem proteção no servidor.
 
 ## Testar o próprio gate

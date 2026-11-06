@@ -54,7 +54,7 @@ auditoria ou análise a implementação. Não inventar requisitos ou supor uma s
 
 ## CLI e integrações
 
-Quando instalado pelo framework, o bloco Engineering OS do AGENTS.md identifica o
+Quando instalado pelo framework, o bloco Engineering OS do AGENTS.md (Codex) ou CLAUDE.md (Claude Code) identifica o
 caminho do runtime e do CLI Python. Consultar seu --help e as referências pertinentes
 em docs/ e workflows/ ao lado do runtime; não assumir caminhos universais. O CLI plan
 é triagem determinística complementar e não um interpretador completo de linguagem.

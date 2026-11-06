@@ -106,6 +106,7 @@ preferir documentos existentes. Não criar arquivos apenas para cumprir formato.
 - **REPROVADA:** falha bloqueante observada, P0/P1 aberto ou violação de política.
 - **INCOMPLETA:** falta teste, evidência, ambiente, revisão ou decisão necessária.
 
-Qualificar aprovação incremental versus release. `AGENTS.md` e gates locais não
+Qualificar aprovação incremental versus release. `AGENTS.md`/`CLAUDE.md` e gates locais não
 impõem proteção no servidor. Para instalação, atualização, remoção e ativação
-persistente, consultar [integração Codex](references/codex-integration.md).
+persistente, consultar [integração Codex](references/codex-integration.md) ou
+[integração Claude Code](references/claude-integration.md).
